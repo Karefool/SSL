@@ -70,6 +70,7 @@ Strategic Success Lab is a premium static website for a consulting business focu
 **Target Audience:** High-growth tech companies, executives seeking revenue acceleration  
 **Conversion Goals:** Primary - book strategy calls via Calendly; Secondary - email signups; Tertiary - direct inquiries  
 **Visual Style:** Modern, premium aesthetic that justifies $50k+ engagements with subtle animations and sophisticated interactions
+**CRITICAL DESIGN RULE:** ALWAYS use professional Lucide-style SVG icons - NEVER use emojis (destroys professional credibility)
 
 ## Current Site Structure
 1. **Hero Section** - Revenue architecture positioning with premium CTA
