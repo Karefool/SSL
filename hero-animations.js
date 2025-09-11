@@ -168,247 +168,165 @@ class HeroAnimations {
     });
   }
 
-  // 3D Network Visualization - Shows Revenue Infrastructure
+  // Revenue Transformation Visualization - Shows Before/After Impact
   initInteractiveChart() {
-    const container = document.getElementById('network-canvas-container');
-    if (!container || !window.THREE) return;
+    const container = document.querySelector('.transformation-container');
+    if (!container) return;
 
-    // Initialize Three.js scene with brand colors
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ 
-      canvas: document.getElementById('network-canvas'),
-      antialias: true,
-      alpha: true 
-    });
-
-    renderer.setSize(container.clientWidth, container.clientHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
-    // Position camera
-    camera.position.z = 50;
-    camera.position.y = 10;
-    camera.lookAt(0, 0, 0);
-
-    // Create nodes with brand colors
-    const nodes = [];
-    const nodeGeometry = new THREE.SphereGeometry(0.5, 16, 16);
-    const primaryNodeMaterial = new THREE.MeshPhongMaterial({ 
-      color: 0xCDDC39, // Brand lime green
-      emissive: 0xCDDC39,
-      emissiveIntensity: 0.3,
-      shininess: 100,
-      transparent: true,
-      opacity: 0.9
-    });
+    // Create chaos particles for the "before" state
+    this.initChaosParticles();
     
-    const secondaryNodeMaterial = new THREE.MeshPhongMaterial({ 
-      color: 0x00D4AA, // Brand teal
-      emissive: 0x00D4AA,
-      emissiveIntensity: 0.2,
-      shininess: 100,
-      transparent: true,
-      opacity: 0.8
-    });
-
-    // Create 25 nodes in strategic 3D formation
-    for (let i = 0; i < 25; i++) {
-      const isPrimary = i < 8; // First 8 are primary nodes
-      const material = isPrimary ? primaryNodeMaterial.clone() : secondaryNodeMaterial.clone();
-      const node = new THREE.Mesh(nodeGeometry, material);
-      
-      node.position.x = (Math.random() - 0.5) * 35;
-      node.position.y = (Math.random() - 0.5) * 18;
-      node.position.z = (Math.random() - 0.5) * 25;
-      node.userData = {
-        pulseOffset: Math.random() * Math.PI * 2,
-        baseScale: isPrimary ? 1.2 : 0.7 + Math.random() * 0.3,
-        isPrimary: isPrimary,
-        connections: []
-      };
-      scene.add(node);
-      nodes.push(node);
-    }
-
-    // Create connections with brand colors
-    const primaryConnectionMaterial = new THREE.LineBasicMaterial({ 
-      color: 0xCDDC39, 
-      opacity: 0.4,
-      transparent: true
-    });
-    
-    const secondaryConnectionMaterial = new THREE.LineBasicMaterial({ 
-      color: 0x00D4AA, 
-      opacity: 0.2,
-      transparent: true
-    });
-
-    const connections = [];
-    nodes.forEach((node, i) => {
-      const numConnections = node.userData.isPrimary ? 3 + Math.floor(Math.random() * 3) : 2 + Math.floor(Math.random() * 2);
-      for (let j = 0; j < numConnections; j++) {
-        const targetIndex = Math.floor(Math.random() * nodes.length);
-        if (targetIndex !== i) {
-          const points = [];
-          points.push(node.position);
-          points.push(nodes[targetIndex].position);
-          const geometry = new THREE.BufferGeometry().setFromPoints(points);
-          const material = node.userData.isPrimary ? primaryConnectionMaterial.clone() : secondaryConnectionMaterial.clone();
-          const line = new THREE.Line(geometry, material);
-          scene.add(line);
-          connections.push({
-            line: line,
-            start: node,
-            end: nodes[targetIndex],
-            pulseOffset: Math.random() * Math.PI * 2,
-            isPrimary: node.userData.isPrimary
-          });
+    // Initialize transformation animation on scroll
+    const transformationObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.animateTransformation();
+          transformationObserver.unobserve(entry.target);
         }
-      }
-    });
-
-    // Add floating particles with brand colors
-    const particleCount = 80;
-    const particleGeometry = new THREE.BufferGeometry();
-    const particlePositions = new Float32Array(particleCount * 3);
-    const particleColors = new Float32Array(particleCount * 3);
-    const particleVelocities = [];
-
-    for (let i = 0; i < particleCount; i++) {
-      particlePositions[i * 3] = (Math.random() - 0.5) * 40;
-      particlePositions[i * 3 + 1] = (Math.random() - 0.5) * 25;
-      particlePositions[i * 3 + 2] = (Math.random() - 0.5) * 35;
-      
-      // Mix of brand colors for particles
-      const isLime = Math.random() > 0.4;
-      if (isLime) {
-        particleColors[i * 3] = 0.8; // R for lime
-        particleColors[i * 3 + 1] = 0.86; // G for lime
-        particleColors[i * 3 + 2] = 0.22; // B for lime
-      } else {
-        particleColors[i * 3] = 0; // R for teal
-        particleColors[i * 3 + 1] = 0.83; // G for teal
-        particleColors[i * 3 + 2] = 0.67; // B for teal
-      }
-      
-      particleVelocities.push({
-        x: (Math.random() - 0.5) * 0.08,
-        y: (Math.random() - 0.5) * 0.08,
-        z: (Math.random() - 0.5) * 0.08
       });
+    }, { threshold: 0.3 });
+
+    transformationObserver.observe(container);
+  }
+
+  // Create floating chaos particles for before state
+  initChaosParticles() {
+    const particlesContainer = document.getElementById('chaosParticles');
+    if (!particlesContainer) {
+      console.warn('Chaos particles container not found');
+      return;
     }
 
-    particleGeometry.setAttribute('position', new THREE.BufferAttribute(particlePositions, 3));
-    particleGeometry.setAttribute('color', new THREE.BufferAttribute(particleColors, 3));
-    const particleMaterial = new THREE.PointsMaterial({
-      size: 0.15,
-      opacity: 0.7,
-      transparent: true,
-      vertexColors: true
-    });
-    const particles = new THREE.Points(particleGeometry, particleMaterial);
-    scene.add(particles);
+    // Clear any existing particles
+    particlesContainer.innerHTML = '';
 
-    // Add lighting that complements brand colors
-    const ambientLight = new THREE.AmbientLight(0x404040, 0.6);
-    scene.add(ambientLight);
-
-    const pointLight1 = new THREE.PointLight(0xCDDC39, 1.2, 100);
-    pointLight1.position.set(20, 20, 20);
-    scene.add(pointLight1);
-
-    const pointLight2 = new THREE.PointLight(0x00D4AA, 0.8, 100);
-    pointLight2.position.set(-20, -20, -20);
-    scene.add(pointLight2);
-
-    // Animation loop
-    let time = 0;
-    let isInView = true;
-    const animate = () => {
-      requestAnimationFrame(animate);
-      if (!isInView) return;
+    // Create chaos particles with proper animation
+    for (let i = 0; i < 22; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
       
-      time += 0.008; // Slower, more elegant animation
+      // Random positioning
+      const x = Math.random() * 100;
+      const y = Math.random() * 100;
+      particle.style.left = x + '%';
+      particle.style.top = y + '%';
+      
+      // Staggered animation delays
+      const delay = Math.random() * 5;
+      const duration = 3 + Math.random() * 4;
+      particle.style.animationDelay = delay + 's';
+      particle.style.animation = `float ${duration}s infinite ease-in-out`;
+      
+      // Add particle to container
+      particlesContainer.appendChild(particle);
+      
+      // Force reflow to ensure animation starts
+      particle.offsetHeight;
+    }
+    
+    console.log('Chaos particles initialized:', particlesContainer.children.length);
+  }
 
-      // Subtle scene rotation
-      scene.rotation.y = time * 0.03;
-      scene.rotation.x = Math.sin(time * 0.5) * 0.05;
-
-      // Pulse nodes elegantly
-      nodes.forEach(node => {
-        const pulse = Math.sin(time * 1.5 + node.userData.pulseOffset) * 0.15 + 1;
-        node.scale.setScalar(node.userData.baseScale * pulse);
-        
-        // Dynamic emissive intensity
-        const intensity = node.userData.isPrimary ? 
-          0.3 + Math.sin(time * 2 + node.userData.pulseOffset) * 0.1 :
-          0.2 + Math.sin(time * 1.8 + node.userData.pulseOffset) * 0.05;
-        node.material.emissiveIntensity = intensity;
+  // Animate the transformation sequence
+  animateTransformation() {
+    console.log('Starting transformation animation');
+    
+    // Ensure metric items are visible first
+    setTimeout(() => {
+      const metricItems = document.querySelectorAll('.metric-item');
+      metricItems.forEach((item, index) => {
+        item.style.opacity = '1';
+        item.style.transform = 'translateX(0)';
       });
+    }, 200);
 
-      // Pulse connections
-      connections.forEach(conn => {
-        const baseOpacity = conn.isPrimary ? 0.4 : 0.2;
-        conn.line.material.opacity = baseOpacity + Math.sin(time * 1.2 + conn.pulseOffset) * 0.15;
+    // Animate before metric bars with staggered timing
+    setTimeout(() => {
+      const beforeFills = document.querySelectorAll('.before-fill');
+      console.log('Found before fills:', beforeFills.length);
+      beforeFills.forEach((fill, index) => {
+        const width = fill.dataset.width;
+        if (width) {
+          setTimeout(() => {
+            fill.style.width = width + '%';
+            console.log(`Animating before fill ${index} to ${width}%`);
+          }, index * 150);
+        }
       });
+    }, 800);
 
-      // Float particles elegantly
-      const positions = particles.geometry.attributes.position.array;
-      for (let i = 0; i < particleCount; i++) {
-        positions[i * 3] += particleVelocities[i].x;
-        positions[i * 3 + 1] += particleVelocities[i].y;
-        positions[i * 3 + 2] += particleVelocities[i].z;
+    // Animate after metric bars with staggered timing
+    setTimeout(() => {
+      const afterFills = document.querySelectorAll('.after-fill');
+      console.log('Found after fills:', afterFills.length);
+      afterFills.forEach((fill, index) => {
+        const width = fill.dataset.width;
+        if (width) {
+          setTimeout(() => {
+            fill.style.width = width + '%';
+            console.log(`Animating after fill ${index} to ${width}%`);
+          }, index * 150);
+        }
+      });
+    }, 2000);
 
-        // Boundary wrapping
-        if (Math.abs(positions[i * 3]) > 20) particleVelocities[i].x *= -1;
-        if (Math.abs(positions[i * 3 + 1]) > 12) particleVelocities[i].y *= -1;
-        if (Math.abs(positions[i * 3 + 2]) > 17) particleVelocities[i].z *= -1;
+    // Add number counting animation to big metrics
+    setTimeout(() => {
+      this.animateMetricNumbers();
+    }, 1200);
+  }
+
+  // Animate metric numbers counting up
+  animateMetricNumbers() {
+    const beforeMetric = document.querySelector('[data-before]');
+    const afterMetric = document.querySelector('[data-after]');
+    
+    if (beforeMetric) {
+      this.countAnimation(beforeMetric, 0, 40, 1000, '%');
+    }
+    
+    if (afterMetric) {
+      setTimeout(() => {
+        this.countAnimation(afterMetric, 40, 92, 1500, '%');
+      }, 1000);
+    }
+  }
+
+  // Count up animation for numbers
+  countAnimation(element, start, end, duration, suffix = '') {
+    const startTime = performance.now();
+    
+    // Find the first text node or create one
+    let textElement = null;
+    for (let node of element.childNodes) {
+      if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
+        textElement = node;
+        break;
       }
-      particles.geometry.attributes.position.needsUpdate = true;
-
-      renderer.render(scene, camera);
-    };
-
-    // Handle window resize
-    const handleResize = () => {
-      camera.aspect = container.clientWidth / container.clientHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(container.clientWidth, container.clientHeight);
-    };
-    window.addEventListener('resize', handleResize);
-
-    // Mouse interaction for premium feel
-    let mouseX = 0;
-    let mouseY = 0;
-    container.addEventListener('mousemove', (event) => {
-      const rect = container.getBoundingClientRect();
-      mouseX = ((event.clientX - rect.left) / rect.width) * 2 - 1;
-      mouseY = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+    }
+    
+    // If no text node found, create one
+    if (!textElement) {
+      textElement = document.createTextNode('');
+      element.insertBefore(textElement, element.firstChild);
+    }
+    
+    const animate = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
       
-      camera.position.x += (mouseX * 3 - camera.position.x) * 0.05;
-      camera.position.y += (mouseY * 3 + 10 - camera.position.y) * 0.05;
-      camera.lookAt(0, 0, 0);
-    });
-
-    // Intersection observer for performance
-    const observer = new IntersectionObserver((entries) => {
-      isInView = entries[0].isIntersecting;
-    });
-    observer.observe(container);
-
-    // Start animation
-    animate();
-
-    // Cleanup function
-    this.cleanup3DNetwork = () => {
-      window.removeEventListener('resize', handleResize);
-      observer.disconnect();
-      scene.traverse((child) => {
-        if (child.geometry) child.geometry.dispose();
-        if (child.material) child.material.dispose();
-      });
-      renderer.dispose();
+      // Easing function for smooth animation
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+      const current = Math.floor(start + (end - start) * easeOut);
+      
+      textElement.textContent = current + suffix;
+      
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
     };
+    
+    requestAnimationFrame(animate);
   }
 }
 

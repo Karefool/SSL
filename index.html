@@ -16,7 +16,6 @@
   <link rel="stylesheet" href="interactive-showcases.css">
   <link rel="stylesheet" href="mobile-excellence.css">
   <link rel="stylesheet" href="homepage-restructure.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <meta property="og:title" content="Strategic Success Lab">
   <meta property="og:description" content="Operator-grade consulting for revenue systems, pipeline partnerships, and practical AI.">
   <meta property="og:type" content="website">
@@ -76,11 +75,90 @@
       <h1 class="hero-title">Revenue Systems Built for <span id="rolling-industry" class="rolling-text">SaaS</span> Companies Ready to Scale</h1>
       <p class="hero-subtitle">Strategic Success Lab architects the growth infrastructure ambitious companies need to break through revenue plateaus. Built for teams of 10-100, not enterprise complexity.</p>
       
-      <!-- Interactive 3D Network -->
-      <div id="network-canvas-container" class="network-3d-container">
-        <canvas id="network-canvas"></canvas>
-        <div class="network-label-overlay">
-          <div class="network-status-indicator">REVENUE SYSTEM ARCHITECTURE</div>
+      <!-- Revenue Transformation Visualization -->
+      <div class="transformation-container">
+        <div class="transformation-split-view">
+          <!-- Before State -->
+          <div class="before-state">
+            <div class="state-label">Before SSL</div>
+            
+            <div class="big-metric" data-before="40%">
+              40%
+              <span class="metric-label-inline">Win Rate</span>
+            </div>
+
+            <div class="metric-item" style="animation-delay: 0.1s;">
+              <div class="metric-label">Pipeline Predictability</div>
+              <div class="metric-bar">
+                <div class="metric-fill before-fill" data-width="18"></div>
+                <div class="metric-value">18%</div>
+              </div>
+            </div>
+
+            <div class="metric-item" style="animation-delay: 0.2s;">
+              <div class="metric-label">Revenue per Rep</div>
+              <div class="metric-bar">
+                <div class="metric-fill before-fill" data-width="35"></div>
+                <div class="metric-value">$240K</div>
+              </div>
+            </div>
+
+            <div class="metric-item" style="animation-delay: 0.3s;">
+              <div class="metric-label">Deal Velocity</div>
+              <div class="metric-bar">
+                <div class="metric-fill before-fill" data-width="28"></div>
+                <div class="metric-value">89 days</div>
+              </div>
+            </div>
+
+            <div class="chaos-particles" id="chaosParticles"></div>
+          </div>
+
+          <!-- Transformation Divider -->
+          <div class="transformation-divider">
+            <div class="transformation-badge">90 DAYS</div>
+            <div class="flow-streams">
+              <div class="flow-line" style="top: 15%;"></div>
+              <div class="flow-line" style="top: 35%;"></div>
+              <div class="flow-line" style="top: 55%;"></div>
+              <div class="flow-line" style="top: 75%;"></div>
+            </div>
+          </div>
+
+          <!-- After State -->
+          <div class="after-state">
+            <div class="state-label">After SSL</div>
+            
+            <div class="big-metric" data-after="92%">
+              92%
+              <span class="metric-label-inline">Win Rate</span>
+            </div>
+            <div class="improvement-badge">+130% improvement</div>
+
+            <div class="metric-item" style="animation-delay: 0.4s;">
+              <div class="metric-label">Pipeline Predictability</div>
+              <div class="metric-bar">
+                <div class="metric-fill after-fill" data-width="94"></div>
+                <div class="metric-value">94%</div>
+              </div>
+            </div>
+
+            <div class="metric-item" style="animation-delay: 0.5s;">
+              <div class="metric-label">Revenue per Rep</div>
+              <div class="metric-bar">
+                <div class="metric-fill after-fill" data-width="88"></div>
+                <div class="metric-value">$620K</div>
+              </div>
+            </div>
+
+            <div class="metric-item" style="animation-delay: 0.6s;">
+              <div class="metric-label">Deal Velocity</div>
+              <div class="metric-bar">
+                <div class="metric-fill after-fill" data-width="82"></div>
+                <div class="metric-value">24 days</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       
