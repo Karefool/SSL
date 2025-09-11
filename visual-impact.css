@@ -31,43 +31,17 @@
   --glass-blur: blur(20px);
 }
 
-/* Full Viewport Hero Section - Layered Design */
+/* Full Viewport Hero Section */
 .hero-homepage {
   height: 100vh;
   background: var(--brand-900);
+  background-image: var(--gradient-hero);
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-}
-
-/* Layered background accent for hero */
-.hero-homepage::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(1000px 480px at 110% 10%, rgba(0,82,255,.10) 0%, rgba(0,82,255,0) 60%),
-    radial-gradient(800px 420px at -10% 0%, rgba(26,95,255,.10) 0%, rgba(26,95,255,0) 55%),
-    linear-gradient(180deg, rgba(241,245,255,.6) 0%, rgba(246,248,252,0) 60%);
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* Soft grid overlay */
-.hero-homepage::after {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  background-image:
-    linear-gradient(rgba(15,23,42,.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15,23,42,.06) 1px, transparent 1px);
-  background-size: 24px 24px;
-  mix-blend-mode: overlay;
-  pointer-events: none;
-  z-index: 1;
 }
 
 /* Animated Canvas Background */
@@ -77,12 +51,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 2 !important;
+  z-index: 1 !important;
 }
 
 .hero-content {
   position: relative;
-  z-index: 3;
+  z-index: 2;
   max-width: 1200px;
   padding: 0 2rem;
 }
