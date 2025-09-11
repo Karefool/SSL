@@ -744,8 +744,9 @@
   font-weight: 800;
   display: inline-block;
   position: relative;
-  min-width: 120px;
+  width: 200px;
   text-align: center;
+  vertical-align: baseline;
 }
 
 /* Hero Value Props */
