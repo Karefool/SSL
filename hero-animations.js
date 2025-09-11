@@ -328,18 +328,18 @@ class HeroAnimations {
     const afterMetric = document.querySelector('[data-after]');
     
     if (beforeMetric) {
-      this.countAnimation(beforeMetric, 0, 22, 1000, '%');
+      this.countAnimation(beforeMetric, 0, 312, 1000, 'K', '$');
     }
     
     if (afterMetric) {
       setTimeout(() => {
-        this.countAnimation(afterMetric, 22, 40, 1500, '%');
+        this.countAnimation(afterMetric, 312, 428, 1500, 'K', '$');
       }, 1000);
     }
   }
 
   // Count up animation for numbers
-  countAnimation(element, start, end, duration, suffix = '') {
+  countAnimation(element, start, end, duration, suffix = '', prefix = '') {
     const startTime = performance.now();
     
     // Find the first text node or create one
@@ -365,7 +365,7 @@ class HeroAnimations {
       const easeOut = 1 - Math.pow(1 - progress, 3);
       const current = Math.floor(start + (end - start) * easeOut);
       
-      textElement.textContent = current + suffix;
+      textElement.textContent = prefix + current + suffix;
       
       if (progress < 1) {
         requestAnimationFrame(animate);

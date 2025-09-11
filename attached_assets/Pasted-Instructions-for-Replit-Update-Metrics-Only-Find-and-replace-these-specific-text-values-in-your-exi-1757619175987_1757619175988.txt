@@ -1,0 +1,74 @@
+Instructions for Replit: Update Metrics Only
+Find and replace these specific text values in your existing visualization:
+Main Metric (Replace "Win Rate")
+javascript// BEFORE - Change from:
+"22%"
+"Win Rate"
+
+// To:
+"$312K"
+"Monthly Revenue"
+
+// AFTER - Change from:
+"40%"
+"Win Rate"
+
+// To:
+"$428K"
+"Monthly Revenue"
+
+// Update the improvement badge:
+"+37% growth in 90 days"
+Three Supporting Metrics (Keep the bars, just change labels and values)
+Metric 1 - Replace "Pipeline Predictability":
+javascript// Change to:
+"AI Automation Impact"
+Before: "8%" (manual processes automated)
+After: "67%" (manual processes automated)
+Metric 2 - Replace "Revenue per Rep":
+javascript// Change to:
+"Partner-Sourced Revenue"
+Before: "$45K" (monthly from partners)
+After: "$132K" (monthly from partners)
+Metric 3 - Replace "Deal Velocity":
+javascript// Change to:
+"Team Productivity Score"
+Before: "42%" (efficiency rating)
+After: "78%" (efficiency rating)
+Update the Revenue Charts
+For the trending line charts at the bottom of each section:
+javascript// BEFORE chart - make it more erratic/volatile:
+"M10,100 L50,95 L90,105 L130,85 L170,108 L210,75 L250,95 L290,80"
+
+// AFTER chart - make it steady growth:
+"M10,80 L50,75 L90,70 L130,65 L170,58 L210,50 L250,42 L290,35"
+Complete Text Replacement Guide:
+Here's exactly what to tell Replit to find and replace:
+
+Find: 22% Replace with: $312K
+Find: 40% Replace with: $428K
+Find: Win Rate Replace with: Monthly Revenue
+Find: Pipeline Predictability Replace with: AI Automation Impact
+Find: Revenue per Rep Replace with: Partner Revenue
+Find: Deal Velocity Replace with: Team Productivity
+Find: 67 days Replace with: 42%
+Find: 21 days Replace with: 78%
+Find: $180K Replace with: $45K/mo
+Find: $540K Replace with: $132K/mo
+
+Why These Metrics Work Better:
+
+Monthly Revenue ($312K → $428K) - Everyone understands revenue growth, not just sales people
+AI Automation Impact (8% → 67%) - Shows your cutting-edge AI implementation capabilities
+Partner Revenue ($45K → $132K) - Demonstrates your partnership development expertise
+Team Productivity (42% → 78%) - Reflects operational improvements and training impact
+
+These metrics tell the story that you:
+
+Grow revenue through multiple channels (not just sales)
+Implement practical AI that actually works
+Build partnership ecosystems
+Transform team operations
+
+The numbers are realistic (37% revenue growth in 90 days is aggressive but achievable) while showing meaningful impact across all your service areas.
+This way you keep your beautiful, clean design but the content now reflects that Strategic Success Lab is a comprehensive growth partner, not just a sales consultancy.
