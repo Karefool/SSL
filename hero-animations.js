@@ -176,6 +176,9 @@ class HeroAnimations {
     // Create chaos particles for the "before" state
     this.initChaosParticles();
     
+    // Create success particles for the "after" state
+    this.initSuccessParticles();
+    
     // Initialize transformation animation on scroll
     const transformationObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -225,6 +228,49 @@ class HeroAnimations {
     }
     
     console.log('Chaos particles initialized:', particlesContainer.children.length);
+  }
+
+  // Create energetic success particles for after state
+  initSuccessParticles() {
+    const particlesContainer = document.getElementById('successParticles');
+    if (!particlesContainer) {
+      console.warn('Success particles container not found');
+      return;
+    }
+
+    // Clear any existing particles
+    particlesContainer.innerHTML = '';
+
+    // Create more particles with varied sizes to show excitement
+    for (let i = 0; i < 35; i++) {
+      const particle = document.createElement('div');
+      
+      // Vary particle sizes for dynamic effect
+      let sizeClass = 'medium';
+      if (i < 8) sizeClass = 'large';
+      else if (i > 25) sizeClass = 'small';
+      
+      particle.className = `success-particle ${sizeClass}`;
+      
+      // Random positioning
+      const x = Math.random() * 100;
+      const y = Math.random() * 100;
+      particle.style.left = x + '%';
+      particle.style.top = y + '%';
+      
+      // Faster, more energetic animations
+      const delay = Math.random() * 2;
+      const duration = 2 + Math.random() * 1.5;
+      particle.style.animationDelay = delay + 's';
+      particle.style.animationDuration = duration + 's';
+      
+      particlesContainer.appendChild(particle);
+      
+      // Force reflow to ensure animation starts
+      particle.offsetHeight;
+    }
+    
+    console.log('Success particles initialized:', particlesContainer.children.length);
   }
 
   // Animate the transformation sequence

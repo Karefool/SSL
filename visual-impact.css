@@ -340,6 +340,64 @@
   box-shadow: 0 0 6px #FF6B35;
 }
 
+/* Success Particles Animation */
+.success-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.success-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 
+    0 0 8px var(--accent),
+    0 0 16px rgba(205, 220, 57, 0.5);
+  opacity: 0.9;
+}
+
+.success-particle.large {
+  width: 4px;
+  height: 4px;
+  animation: successFloat 2.5s ease-in-out infinite;
+}
+
+.success-particle.medium {
+  width: 3px;
+  height: 3px;
+  animation: successFloat 3s ease-in-out infinite;
+}
+
+.success-particle.small {
+  width: 2px;
+  height: 2px;
+  animation: successFloat 3.5s ease-in-out infinite;
+}
+
+@keyframes successFloat {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.9;
+  }
+  25% {
+    transform: translate(8px, -12px) scale(1.2);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-6px, 8px) scale(0.8);
+    opacity: 0.7;
+  }
+  75% {
+    transform: translate(12px, -6px) scale(1.1);
+    opacity: 0.9;
+  }
+}
+
 @keyframes float {
   0%, 100% {
     transform: translate(0, 0) rotate(0deg);
