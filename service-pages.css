@@ -1,6 +1,6 @@
-/* SERVICE PAGES STYLING */
+/* SERVICE PAGES STYLING - UNIFIED DESIGN SYSTEM */
 
-/* Service Hero Sections */
+/* Service Hero Sections - SUBTLE GRADIENTS ONLY */
 .service-hero {
   height: 100vh;
   position: relative;
@@ -9,31 +9,16 @@
   justify-content: center;
   overflow: hidden;
   color: white;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
 }
 
-/* Revenue Architecture Hero */
-.revenue-hero {
-  background: linear-gradient(135deg, #1a0033 0%, #2d1b3e 30%, #1a0033 70%, #001f3f 100%);
-}
-
-/* Strategic Partnerships Hero */
-.partnerships-hero {
-  background: linear-gradient(135deg, #001f3f 0%, #1a0033 30%, #2d1b3e 70%, #1a0033 100%);
-}
-
-/* AI Implementation Hero */
-.ai-hero {
-  background: linear-gradient(135deg, #0a0a2e 0%, #16213e 30%, #0f3460 70%, #1a0033 100%);
-}
-
-/* Design & UX Hero */
-.design-hero {
-  background: linear-gradient(135deg, #2d1b3e 0%, #1a0033 30%, #4a1a4a 70%, #2d1b3e 100%);
-}
-
-/* Talent Solutions Hero */
+/* All hero variations use the same subtle primary gradient */
+.revenue-hero,
+.partnerships-hero,
+.ai-hero,
+.design-hero,
 .talent-hero {
-  background: linear-gradient(135deg, #1a0033 0%, #4a1a4a 30%, #2d1b3e 70%, #001f3f 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
 }
 
 /* Talent Team Visual */
@@ -337,6 +322,233 @@
 .filter-btn.active {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* PROFESSIONAL POLISH ADDITIONS - DESIGN SYSTEM INTEGRATION */
+
+/* 1. STANDARDIZED BUTTONS - ALL CONSISTENT */
+.btn-primary, .btn-premium {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius);
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  text-decoration: none;
+  border: 2px solid var(--primary);
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:hover, .btn-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius);
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  text-decoration: none;
+  border: 2px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  background: var(--primary-light);
+  border-color: var(--primary-hover);
+  color: var(--primary-hover);
+}
+
+/* 2. ALL CARDS GET CONSISTENT SHADOWS */
+.problem-card,
+.deliverable-card,
+.case-study-card,
+.calculator-container,
+.approach-step,
+.faq-item,
+.result-card,
+.portfolio-item,
+.cost-result-card,
+.stat-item {
+  box-shadow: var(--shadow-md) !important;
+  transition: all var(--transition-normal) !important;
+  border-radius: var(--radius) !important;
+}
+
+/* 3. HOVER EFFECTS ON ALL INTERACTIVE ELEMENTS */
+.problem-card:hover,
+.deliverable-card:hover,
+.case-study-card:hover,
+.approach-step:hover,
+.portfolio-item:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: var(--shadow-xl) !important;
+}
+
+.faq-item:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg) !important;
+}
+
+/* 4. CONSISTENT TYPOGRAPHY USING DESIGN SYSTEM */
+.section-header h2 {
+  font-size: var(--text-5xl) !important;
+  font-weight: var(--font-bold) !important;
+  color: var(--gray-900) !important;
+  margin-bottom: var(--space-4) !important;
+}
+
+.section-header p {
+  font-size: var(--text-lg) !important;
+  color: var(--gray-600) !important;
+  margin-bottom: var(--space-8) !important;
+}
+
+.problem-card h3,
+.deliverable-card h3,
+.approach-step h3 {
+  font-size: var(--text-2xl) !important;
+  font-weight: var(--font-semibold) !important;
+  color: var(--gray-900) !important;
+  margin-bottom: var(--space-3) !important;
+}
+
+.problem-card p,
+.deliverable-card p,
+.approach-step p {
+  font-size: var(--text-base) !important;
+  color: var(--gray-600) !important;
+  line-height: 1.6 !important;
+}
+
+/* 5. LOADING ANIMATIONS FOR DYNAMIC CONTENT */
+.quiz-results,
+.calculator-results {
+  animation: fadeUp 0.5s ease-out;
+}
+
+.result-value,
+.cost-result-value,
+.stat-number {
+  animation: fadeUp 0.8s ease-out 0.2s both;
+}
+
+/* 6. ENTRANCE ANIMATIONS FOR SECTIONS */
+.service-section {
+  animation: fadeUp 0.6s ease-out;
+}
+
+.service-section:nth-child(odd) {
+  animation-delay: 0.1s;
+}
+
+.service-section:nth-child(even) {
+  animation-delay: 0.2s;
+}
+
+/* 7. CONSISTENT SPACING USING DESIGN SYSTEM */
+.hero-stats {
+  gap: var(--space-8) !important;
+  margin-bottom: var(--space-12) !important;
+}
+
+.hero-cta {
+  gap: var(--space-6) !important;
+}
+
+.problem-grid,
+.deliverables-grid {
+  gap: var(--space-8) !important;
+}
+
+.approach-timeline {
+  gap: var(--space-10) !important;
+}
+
+/* 8. FAQ ACCORDION POLISH */
+.faq-question {
+  font-size: var(--text-lg) !important;
+  font-weight: var(--font-semibold) !important;
+  color: var(--gray-900) !important;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.faq-question:hover {
+  color: var(--primary) !important;
+}
+
+.faq-answer {
+  font-size: var(--text-base) !important;
+  color: var(--gray-600) !important;
+  line-height: 1.6 !important;
+}
+
+/* 9. FORM INPUTS CONSISTENCY */
+input[type="number"],
+input[type="text"],
+textarea,
+select {
+  background: var(--white) !important;
+  border: 2px solid var(--gray-300) !important;
+  border-radius: var(--radius-small) !important;
+  padding: var(--space-3) !important;
+  font-size: var(--text-base) !important;
+  transition: all var(--transition-normal) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 3px var(--primary-light) !important;
+}
+
+/* 10. RESPONSIVE IMPROVEMENTS */
+@media (max-width: 768px) {
+  .service-title {
+    font-size: var(--text-5xl) !important;
+  }
+  
+  .service-subtitle {
+    font-size: var(--text-lg) !important;
+  }
+  
+  .btn-primary, .btn-secondary, .btn-premium {
+    padding: var(--space-3) var(--space-5) !important;
+    font-size: var(--text-sm) !important;
+  }
+  
+  .hero-stats {
+    gap: var(--space-4) !important;
+  }
+  
+  .hero-cta {
+    gap: var(--space-4) !important;
+    flex-direction: column !important;
+  }
 }
 
 /* AI Circuit Visual */
@@ -675,20 +887,22 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 0 2rem;
+  animation: fadeUp 0.8s ease-out;
 }
 
 .service-title {
-  font-size: clamp(48px, 8vw, 72px);
-  font-weight: 800;
-  margin-bottom: 1.5rem;
+  font-size: var(--text-6xl);
+  font-weight: var(--font-extrabold);
+  margin-bottom: var(--space-6);
+  color: white;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .service-subtitle {
-  font-size: clamp(18px, 2.5vw, 24px);
-  font-weight: 400;
+  font-size: var(--text-xl);
+  font-weight: var(--font-normal);
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 3rem;
+  margin-bottom: var(--space-12);
   line-height: 1.6;
 }
 
