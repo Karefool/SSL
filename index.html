@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="interactive-showcases.css">
   <link rel="stylesheet" href="mobile-excellence.css">
   <link rel="stylesheet" href="homepage-restructure.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <meta property="og:title" content="Strategic Success Lab">
   <meta property="og:description" content="Operator-grade consulting for revenue systems, pipeline partnerships, and practical AI.">
   <meta property="og:type" content="website">
@@ -75,9 +76,12 @@
       <h1 class="hero-title">Revenue Systems Built for <span id="rolling-industry" class="rolling-text">SaaS</span> Companies Ready to Scale</h1>
       <p class="hero-subtitle">Strategic Success Lab architects the growth infrastructure ambitious companies need to break through revenue plateaus. Built for teams of 10-100, not enterprise complexity.</p>
       
-      <!-- Interactive Revenue Chart -->
-      <div class="revenue-chart">
-        <!-- Populated by JavaScript -->
+      <!-- Interactive 3D Network -->
+      <div id="network-canvas-container" class="network-3d-container">
+        <canvas id="network-canvas"></canvas>
+        <div class="network-label-overlay">
+          <div class="network-status-indicator">REVENUE SYSTEM ARCHITECTURE</div>
+        </div>
       </div>
       
       <!-- SMB Value Props -->

@@ -168,204 +168,247 @@ class HeroAnimations {
     });
   }
 
-  // Interactive Network Diagram - Shows Revenue System Transformation
+  // 3D Network Visualization - Shows Revenue Infrastructure
   initInteractiveChart() {
-    const chartContainer = document.querySelector('.revenue-chart');
-    if (!chartContainer) return;
+    const container = document.getElementById('network-canvas-container');
+    if (!container || !window.THREE) return;
 
-    // Create enhanced interactive network diagram
-    chartContainer.innerHTML = `
-      <div class="network-diagram">
-        <svg class="network-svg" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-          <!-- Pulsing connection lines with gradient -->
-          <defs>
-            <linearGradient id="flowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" style="stop-color:rgba(205, 220, 57, 0.3);stop-opacity:1" />
-              <stop offset="50%" style="stop-color:rgba(205, 220, 57, 0.8);stop-opacity:1" />
-              <stop offset="100%" style="stop-color:rgba(0, 212, 170, 0.6);stop-opacity:1" />
-            </linearGradient>
-            <filter id="glow">
-              <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-              <feMerge> 
-                <feMergeNode in="coloredBlur"/>
-                <feMergeNode in="SourceGraphic"/>
-              </feMerge>
-            </filter>
-          </defs>
-          
-          <line class="connection-line line-1" x1="80" y1="100" x2="160" y2="60" stroke="url(#flowGradient)" stroke-width="2"/>
-          <line class="connection-line line-2" x1="80" y1="100" x2="160" y2="140" stroke="url(#flowGradient)" stroke-width="2"/>
-          <line class="connection-line line-3" x1="160" y1="60" x2="240" y2="80" stroke="url(#flowGradient)" stroke-width="2"/>
-          <line class="connection-line line-4" x1="160" y1="140" x2="240" y2="120" stroke="url(#flowGradient)" stroke-width="2"/>
-          <line class="connection-line line-5" x1="240" y1="80" x2="320" y2="100" stroke="url(#flowGradient)" stroke-width="2"/>
-          <line class="connection-line line-6" x1="240" y1="120" x2="320" y2="100" stroke="url(#flowGradient)" stroke-width="2"/>
-          
-          <!-- Interactive network nodes with hover keywords -->
-          <g class="node-group" data-keyword="Growth">
-            <circle class="network-node node-1" cx="80" cy="100" r="25" fill="rgba(205, 220, 57, 0.2)" stroke="#CDDC39" stroke-width="2"/>
-            <text x="80" y="106" text-anchor="middle" fill="white" font-size="10" font-weight="600" class="node-label">LEAD</text>
-            <text x="80" y="130" text-anchor="middle" fill="#CDDC39" font-size="8" font-weight="700" class="hover-keyword" opacity="0">GROWTH</text>
-          </g>
-          
-          <g class="node-group" data-keyword="Strategy">
-            <circle class="network-node node-2" cx="160" cy="60" r="20" fill="rgba(205, 220, 57, 0.2)" stroke="#CDDC39" stroke-width="2"/>
-            <text x="160" y="65" text-anchor="middle" fill="white" font-size="9" font-weight="600" class="node-label">QUALIFY</text>
-            <text x="160" y="85" text-anchor="middle" fill="#CDDC39" font-size="7" font-weight="700" class="hover-keyword" opacity="0">STRATEGY</text>
-          </g>
-          
-          <g class="node-group" data-keyword="Efficiency">
-            <circle class="network-node node-3" cx="160" cy="140" r="20" fill="rgba(205, 220, 57, 0.2)" stroke="#CDDC39" stroke-width="2"/>
-            <text x="160" y="145" text-anchor="middle" fill="white" font-size="9" font-weight="600" class="node-label">NURTURE</text>
-            <text x="160" y="165" text-anchor="middle" fill="#CDDC39" font-size="7" font-weight="700" class="hover-keyword" opacity="0">EFFICIENCY</text>
-          </g>
-          
-          <g class="node-group" data-keyword="Results">
-            <circle class="network-node node-4" cx="240" cy="80" r="18" fill="rgba(205, 220, 57, 0.2)" stroke="#CDDC39" stroke-width="2"/>
-            <text x="240" y="85" text-anchor="middle" fill="white" font-size="8" font-weight="600" class="node-label">DEMO</text>
-            <text x="240" y="105" text-anchor="middle" fill="#CDDC39" font-size="7" font-weight="700" class="hover-keyword" opacity="0">RESULTS</text>
-          </g>
-          
-          <g class="node-group" data-keyword="Scale">
-            <circle class="network-node node-5" cx="240" cy="120" r="18" fill="rgba(205, 220, 57, 0.2)" stroke="#CDDC39" stroke-width="2"/>
-            <text x="240" y="125" text-anchor="middle" fill="white" font-size="8" font-weight="600" class="node-label">PARTNER</text>
-            <text x="240" y="145" text-anchor="middle" fill="#CDDC39" font-size="7" font-weight="700" class="hover-keyword" opacity="0">SCALE</text>
-          </g>
-          
-          <g class="node-group" data-keyword="Success">
-            <circle class="network-node node-6" cx="320" cy="100" r="22" fill="rgba(205, 220, 57, 0.2)" stroke="#CDDC39" stroke-width="2"/>
-            <text x="320" y="106" text-anchor="middle" fill="white" font-size="9" font-weight="600" class="node-label">CLOSE</text>
-            <text x="320" y="130" text-anchor="middle" fill="#CDDC39" font-size="8" font-weight="700" class="hover-keyword" opacity="0">SUCCESS</text>
-          </g>
-          
-          <!-- Enhanced flowing data particles -->
-          <circle class="data-particle particle-1" cx="80" cy="100" r="3" fill="#00D4AA" filter="url(#glow)"/>
-          <circle class="data-particle particle-2" cx="80" cy="100" r="2" fill="#CDDC39" filter="url(#glow)"/>
-          <circle class="data-particle particle-3" cx="80" cy="100" r="2.5" fill="#00D4AA" filter="url(#glow)"/>
-          <circle class="data-particle particle-4" cx="80" cy="100" r="2" fill="#CDDC39" filter="url(#glow)"/>
-        </svg>
-        
-        <div class="transformation-status">
-          <div class="chaos-indicator">Transforming...</div>
-        </div>
-      </div>
-    `;
-
-    // Add interactive hover effects to nodes
-    const nodeGroups = chartContainer.querySelectorAll('.node-group');
-    nodeGroups.forEach(group => {
-      const node = group.querySelector('.network-node');
-      const keyword = group.querySelector('.hover-keyword');
-      
-      group.addEventListener('mouseenter', () => {
-        node.style.filter = 'url(#glow)';
-        node.style.transform = 'scale(1.2)';
-        node.style.fill = 'rgba(205, 220, 57, 0.6)';
-        keyword.style.opacity = '1';
-        keyword.style.transform = 'translateY(-5px)';
-      });
-      
-      group.addEventListener('mouseleave', () => {
-        node.style.filter = 'none';
-        node.style.transform = 'scale(1)';
-        node.style.fill = 'rgba(205, 220, 57, 0.2)';
-        keyword.style.opacity = '0';
-        keyword.style.transform = 'translateY(0)';
-      });
+    // Initialize Three.js scene with brand colors
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ 
+      canvas: document.getElementById('network-canvas'),
+      antialias: true,
+      alpha: true 
     });
 
-    // Chaos-to-order transformation animation on scroll
-    const networkObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          this.animateChaosToOrder(entry.target);
+    renderer.setSize(container.clientWidth, container.clientHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    // Position camera
+    camera.position.z = 50;
+    camera.position.y = 10;
+    camera.lookAt(0, 0, 0);
+
+    // Create nodes with brand colors
+    const nodes = [];
+    const nodeGeometry = new THREE.SphereGeometry(0.5, 16, 16);
+    const primaryNodeMaterial = new THREE.MeshPhongMaterial({ 
+      color: 0xCDDC39, // Brand lime green
+      emissive: 0xCDDC39,
+      emissiveIntensity: 0.3,
+      shininess: 100,
+      transparent: true,
+      opacity: 0.9
+    });
+    
+    const secondaryNodeMaterial = new THREE.MeshPhongMaterial({ 
+      color: 0x00D4AA, // Brand teal
+      emissive: 0x00D4AA,
+      emissiveIntensity: 0.2,
+      shininess: 100,
+      transparent: true,
+      opacity: 0.8
+    });
+
+    // Create 25 nodes in strategic 3D formation
+    for (let i = 0; i < 25; i++) {
+      const isPrimary = i < 8; // First 8 are primary nodes
+      const material = isPrimary ? primaryNodeMaterial.clone() : secondaryNodeMaterial.clone();
+      const node = new THREE.Mesh(nodeGeometry, material);
+      
+      node.position.x = (Math.random() - 0.5) * 35;
+      node.position.y = (Math.random() - 0.5) * 18;
+      node.position.z = (Math.random() - 0.5) * 25;
+      node.userData = {
+        pulseOffset: Math.random() * Math.PI * 2,
+        baseScale: isPrimary ? 1.2 : 0.7 + Math.random() * 0.3,
+        isPrimary: isPrimary,
+        connections: []
+      };
+      scene.add(node);
+      nodes.push(node);
+    }
+
+    // Create connections with brand colors
+    const primaryConnectionMaterial = new THREE.LineBasicMaterial({ 
+      color: 0xCDDC39, 
+      opacity: 0.4,
+      transparent: true
+    });
+    
+    const secondaryConnectionMaterial = new THREE.LineBasicMaterial({ 
+      color: 0x00D4AA, 
+      opacity: 0.2,
+      transparent: true
+    });
+
+    const connections = [];
+    nodes.forEach((node, i) => {
+      const numConnections = node.userData.isPrimary ? 3 + Math.floor(Math.random() * 3) : 2 + Math.floor(Math.random() * 2);
+      for (let j = 0; j < numConnections; j++) {
+        const targetIndex = Math.floor(Math.random() * nodes.length);
+        if (targetIndex !== i) {
+          const points = [];
+          points.push(node.position);
+          points.push(nodes[targetIndex].position);
+          const geometry = new THREE.BufferGeometry().setFromPoints(points);
+          const material = node.userData.isPrimary ? primaryConnectionMaterial.clone() : secondaryConnectionMaterial.clone();
+          const line = new THREE.Line(geometry, material);
+          scene.add(line);
+          connections.push({
+            line: line,
+            start: node,
+            end: nodes[targetIndex],
+            pulseOffset: Math.random() * Math.PI * 2,
+            isPrimary: node.userData.isPrimary
+          });
         }
-      });
+      }
     });
 
-    networkObserver.observe(chartContainer);
-  }
+    // Add floating particles with brand colors
+    const particleCount = 80;
+    const particleGeometry = new THREE.BufferGeometry();
+    const particlePositions = new Float32Array(particleCount * 3);
+    const particleColors = new Float32Array(particleCount * 3);
+    const particleVelocities = [];
 
-  // Chaos-to-order transformation animation
-  animateChaosToOrder(container) {
-    const nodes = container.querySelectorAll('.network-node');
-    const lines = container.querySelectorAll('.connection-line');
-    const particles = container.querySelectorAll('.data-particle');
-    const labels = container.querySelectorAll('.node-label, .hover-keyword');
-    const statusIndicator = container.querySelector('.chaos-indicator');
-    
-    // Phase 1: Show chaos - nodes scattered randomly
-    nodes.forEach((node, index) => {
-      const randomX = Math.random() * 300 + 50;
-      const randomY = Math.random() * 150 + 25;
-      node.style.opacity = '0.3';
-      node.style.transform = `translate(${randomX - parseFloat(node.getAttribute('cx'))}px, ${randomY - parseFloat(node.getAttribute('cy'))}px) scale(0.5) rotate(${Math.random() * 360}deg)`;
-      node.style.fill = 'rgba(255, 107, 53, 0.4)'; // Chaotic red
+    for (let i = 0; i < particleCount; i++) {
+      particlePositions[i * 3] = (Math.random() - 0.5) * 40;
+      particlePositions[i * 3 + 1] = (Math.random() - 0.5) * 25;
+      particlePositions[i * 3 + 2] = (Math.random() - 0.5) * 35;
+      
+      // Mix of brand colors for particles
+      const isLime = Math.random() > 0.4;
+      if (isLime) {
+        particleColors[i * 3] = 0.8; // R for lime
+        particleColors[i * 3 + 1] = 0.86; // G for lime
+        particleColors[i * 3 + 2] = 0.22; // B for lime
+      } else {
+        particleColors[i * 3] = 0; // R for teal
+        particleColors[i * 3 + 1] = 0.83; // G for teal
+        particleColors[i * 3 + 2] = 0.67; // B for teal
+      }
+      
+      particleVelocities.push({
+        x: (Math.random() - 0.5) * 0.08,
+        y: (Math.random() - 0.5) * 0.08,
+        z: (Math.random() - 0.5) * 0.08
+      });
+    }
+
+    particleGeometry.setAttribute('position', new THREE.BufferAttribute(particlePositions, 3));
+    particleGeometry.setAttribute('color', new THREE.BufferAttribute(particleColors, 3));
+    const particleMaterial = new THREE.PointsMaterial({
+      size: 0.15,
+      opacity: 0.7,
+      transparent: true,
+      vertexColors: true
     });
-    
-    // Hide connections and labels initially
-    lines.forEach(line => {
-      line.style.opacity = '0';
-      line.style.strokeDasharray = '200';
-      line.style.strokeDashoffset = '200';
+    const particles = new THREE.Points(particleGeometry, particleMaterial);
+    scene.add(particles);
+
+    // Add lighting that complements brand colors
+    const ambientLight = new THREE.AmbientLight(0x404040, 0.6);
+    scene.add(ambientLight);
+
+    const pointLight1 = new THREE.PointLight(0xCDDC39, 1.2, 100);
+    pointLight1.position.set(20, 20, 20);
+    scene.add(pointLight1);
+
+    const pointLight2 = new THREE.PointLight(0x00D4AA, 0.8, 100);
+    pointLight2.position.set(-20, -20, -20);
+    scene.add(pointLight2);
+
+    // Animation loop
+    let time = 0;
+    let isInView = true;
+    const animate = () => {
+      requestAnimationFrame(animate);
+      if (!isInView) return;
+      
+      time += 0.008; // Slower, more elegant animation
+
+      // Subtle scene rotation
+      scene.rotation.y = time * 0.03;
+      scene.rotation.x = Math.sin(time * 0.5) * 0.05;
+
+      // Pulse nodes elegantly
+      nodes.forEach(node => {
+        const pulse = Math.sin(time * 1.5 + node.userData.pulseOffset) * 0.15 + 1;
+        node.scale.setScalar(node.userData.baseScale * pulse);
+        
+        // Dynamic emissive intensity
+        const intensity = node.userData.isPrimary ? 
+          0.3 + Math.sin(time * 2 + node.userData.pulseOffset) * 0.1 :
+          0.2 + Math.sin(time * 1.8 + node.userData.pulseOffset) * 0.05;
+        node.material.emissiveIntensity = intensity;
+      });
+
+      // Pulse connections
+      connections.forEach(conn => {
+        const baseOpacity = conn.isPrimary ? 0.4 : 0.2;
+        conn.line.material.opacity = baseOpacity + Math.sin(time * 1.2 + conn.pulseOffset) * 0.15;
+      });
+
+      // Float particles elegantly
+      const positions = particles.geometry.attributes.position.array;
+      for (let i = 0; i < particleCount; i++) {
+        positions[i * 3] += particleVelocities[i].x;
+        positions[i * 3 + 1] += particleVelocities[i].y;
+        positions[i * 3 + 2] += particleVelocities[i].z;
+
+        // Boundary wrapping
+        if (Math.abs(positions[i * 3]) > 20) particleVelocities[i].x *= -1;
+        if (Math.abs(positions[i * 3 + 1]) > 12) particleVelocities[i].y *= -1;
+        if (Math.abs(positions[i * 3 + 2]) > 17) particleVelocities[i].z *= -1;
+      }
+      particles.geometry.attributes.position.needsUpdate = true;
+
+      renderer.render(scene, camera);
+    };
+
+    // Handle window resize
+    const handleResize = () => {
+      camera.aspect = container.clientWidth / container.clientHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(container.clientWidth, container.clientHeight);
+    };
+    window.addEventListener('resize', handleResize);
+
+    // Mouse interaction for premium feel
+    let mouseX = 0;
+    let mouseY = 0;
+    container.addEventListener('mousemove', (event) => {
+      const rect = container.getBoundingClientRect();
+      mouseX = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+      mouseY = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+      
+      camera.position.x += (mouseX * 3 - camera.position.x) * 0.05;
+      camera.position.y += (mouseY * 3 + 10 - camera.position.y) * 0.05;
+      camera.lookAt(0, 0, 0);
     });
-    
-    labels.forEach(label => label.style.opacity = '0');
-    particles.forEach(particle => particle.style.opacity = '0');
-    
-    // Phase 2: Begin transformation (after 1 second)
-    setTimeout(() => {
-      statusIndicator.textContent = 'Organizing System...';
-      
-      // Nodes move to correct positions and become organized
-      nodes.forEach((node, index) => {
-        setTimeout(() => {
-          node.style.opacity = '1';
-          node.style.transform = 'translate(0px, 0px) scale(1) rotate(0deg)';
-          node.style.fill = 'rgba(205, 220, 57, 0.2)'; // Organized green
-          node.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
-        }, index * 150);
+
+    // Intersection observer for performance
+    const observer = new IntersectionObserver((entries) => {
+      isInView = entries[0].isIntersecting;
+    });
+    observer.observe(container);
+
+    // Start animation
+    animate();
+
+    // Cleanup function
+    this.cleanup3DNetwork = () => {
+      window.removeEventListener('resize', handleResize);
+      observer.disconnect();
+      scene.traverse((child) => {
+        if (child.geometry) child.geometry.dispose();
+        if (child.material) child.material.dispose();
       });
-    }, 1000);
-    
-    // Phase 3: Connect the system (after 2.2 seconds)
-    setTimeout(() => {
-      statusIndicator.textContent = 'Building Connections...';
-      
-      lines.forEach((line, index) => {
-        setTimeout(() => {
-          line.style.opacity = '1';
-          line.style.strokeDashoffset = '0';
-          line.style.transition = 'all 0.6s ease-out';
-        }, index * 100);
-      });
-    }, 2200);
-    
-    // Phase 4: Add labels and activate data flow (after 3 seconds)
-    setTimeout(() => {
-      statusIndicator.textContent = 'System Optimized';
-      
-      // Show labels
-      labels.forEach((label, index) => {
-        setTimeout(() => {
-          label.style.opacity = '1';
-          label.style.transition = 'all 0.4s ease-out';
-        }, index * 80);
-      });
-      
-      // Activate flowing particles
-      particles.forEach((particle, index) => {
-        setTimeout(() => {
-          particle.style.opacity = '1';
-          particle.style.animationPlayState = 'running';
-        }, index * 200);
-      });
-    }, 3000);
-    
-    // Phase 5: Hide status indicator (after 4 seconds)
-    setTimeout(() => {
-      statusIndicator.style.opacity = '0';
-      statusIndicator.style.transform = 'translateY(-20px)';
-    }, 4000);
+      renderer.dispose();
+    };
   }
 }
 

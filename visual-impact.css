@@ -92,7 +92,7 @@
   transform: translateY(0);
 }
 
-/* Network Diagram - Revenue System Transformation */
+/* 3D Network Visualization Container */
 .revenue-chart {
   display: flex;
   justify-content: center;
@@ -100,209 +100,117 @@
   perspective: 1000px;
 }
 
-.network-diagram {
+.network-3d-container {
   position: relative;
   width: 100%;
-  max-width: 500px;
-  height: 250px;
+  max-width: 600px;
+  height: 400px;
   margin: 0 auto;
+  background: linear-gradient(135deg, rgba(26, 0, 51, 0.8) 0%, rgba(21, 25, 50, 0.6) 100%);
+  border-radius: 16px;
+  overflow: hidden;
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid rgba(205, 220, 57, 0.2);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(205, 220, 57, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.network-svg {
+.network-3d-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 25px 80px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(205, 220, 57, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+#network-canvas {
   width: 100%;
-  height: 80%;
-  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.3));
+  height: 100%;
+  display: block;
+  cursor: grab;
 }
 
-.network-node {
-  opacity: 0;
-  transform: scale(0);
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+#network-canvas:active {
+  cursor: grabbing;
 }
 
-.network-node:hover {
-  fill: rgba(205, 220, 57, 0.4) !important;
-  stroke: #CDDC39 !important;
-  stroke-width: 3 !important;
-  transform: scale(1.1);
+.network-label-overlay {
+  position: absolute;
+  bottom: 20px;
+  right: 24px;
+  pointer-events: none;
 }
 
-.connection-line {
-  opacity: 0;
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
-  transition: all 0.8s ease-in-out;
-}
-
-.data-particle {
-  opacity: 0;
-  animation: dataFlow 3s linear infinite;
-  animation-play-state: paused;
-}
-
-.network-labels {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  margin-top: 1rem;
-}
-
-.network-label {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.network-label.left {
-  color: rgba(255, 107, 53, 0.8);
-}
-
-.network-label.right {
+.network-status-indicator {
   color: var(--accent);
-}
-
-/* Node interaction styles */
-.node-group {
-  cursor: pointer;
-}
-
-.network-node {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  transform-origin: center;
-}
-
-.hover-keyword {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translateY(0);
-  font-family: 'Inter', sans-serif;
-  letter-spacing: 1px;
-}
-
-.node-label {
-  transition: all 0.3s ease-out;
-  font-family: 'Inter', sans-serif;
-  letter-spacing: 0.5px;
-}
-
-/* Transformation status indicator */
-.transformation-status {
-  text-align: center;
-  margin-top: 1rem;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.chaos-indicator {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  transition: all 0.4s ease-out;
-  transform: translateY(0);
+  opacity: 0.8;
+  font-family: 'Inter', monospace;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* Enhanced connection line animations */
-.connection-line {
+/* 3D Network Loading State */
+.network-3d-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(205, 220, 57, 0.1) 50%, transparent 70%);
   opacity: 0;
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
-  transition: all 0.8s ease-in-out;
+  animation: networkLoading 2s ease-in-out;
+  pointer-events: none;
 }
 
-.connection-line.line-1 { animation: linePulse 3s ease-in-out infinite; animation-delay: 0s; }
-.connection-line.line-2 { animation: linePulse 3s ease-in-out infinite; animation-delay: 0.5s; }
-.connection-line.line-3 { animation: linePulse 3s ease-in-out infinite; animation-delay: 1s; }
-.connection-line.line-4 { animation: linePulse 3s ease-in-out infinite; animation-delay: 1.5s; }
-.connection-line.line-5 { animation: linePulse 3s ease-in-out infinite; animation-delay: 2s; }
-.connection-line.line-6 { animation: linePulse 3s ease-in-out infinite; animation-delay: 2.5s; }
-
-@keyframes linePulse {
-  0%, 100% {
-    stroke-width: 2;
-    opacity: 0.6;
+@keyframes networkLoading {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
   }
   50% {
-    stroke-width: 4;
     opacity: 1;
-  }
-}
-
-/* Enhanced flowing data particles */
-.data-particle {
-  opacity: 0;
-  animation: enhancedDataFlow 4s linear infinite;
-  animation-play-state: paused;
-  filter: drop-shadow(0 0 4px currentColor);
-}
-
-.particle-1 {
-  animation-delay: 0s;
-}
-
-.particle-2 {
-  animation-delay: 1s;
-}
-
-.particle-3 {
-  animation-delay: 2s;
-}
-
-.particle-4 {
-  animation-delay: 3s;
-}
-
-@keyframes enhancedDataFlow {
-  0% {
-    opacity: 1;
-    transform: translate(0, 0) scale(1);
-  }
-  15% {
-    opacity: 0.9;
-    transform: translate(80px, -40px) scale(1.2);
-  }
-  30% {
-    opacity: 0.8;
-    transform: translate(160px, -20px) scale(1.1);
-  }
-  45% {
-    opacity: 0.7;
-    transform: translate(240px, 0px) scale(1.3);
-  }
-  60% {
-    opacity: 0.6;
-    transform: translate(280px, -10px) scale(1.1);
-  }
-  85% {
-    opacity: 0.4;
-    transform: translate(320px, 0px) scale(1.4);
   }
   100% {
     opacity: 0;
-    transform: translate(360px, 0px) scale(0.8);
+    transform: translateX(100%);
   }
 }
 
-/* Mobile responsiveness for network diagram */
+/* Mobile responsiveness for 3D network */
 @media (max-width: 768px) {
-  .network-svg {
-    height: 70%;
+  .network-3d-container {
+    height: 300px;
+    max-width: 100%;
+    margin: 0 1rem;
+    border-radius: 12px;
   }
   
-  .hover-keyword {
-    font-size: 6px !important;
+  .network-status-indicator {
+    font-size: 9px;
+    bottom: 15px;
+    right: 16px;
   }
   
-  .node-label {
-    font-size: 8px !important;
+  #network-canvas {
+    /* Lower performance on mobile */
+    image-rendering: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .network-3d-container {
+    height: 250px;
   }
   
-  .chaos-indicator {
-    font-size: 0.8rem;
+  .network-status-indicator {
+    font-size: 8px;
   }
 }
 
