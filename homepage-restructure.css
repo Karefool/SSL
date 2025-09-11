@@ -1206,3 +1206,282 @@ textarea:focus {
     transform: translateY(-5px) scale(1.02);
   }
 }
+
+/* HOMEPAGE DIFFERENTIATION & PRICING SECTIONS */
+.differentiation-section {
+  padding: 100px 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.section-header h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--primary-dark);
+}
+
+.section-header .section-subtitle {
+  font-size: 20px;
+  color: var(--gray-3);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.comparison-preview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ssl-advantage {
+  background: var(--primary-light);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 3px solid var(--accent-1);
+}
+
+.advantage-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.comparison-logo {
+  width: 48px;
+  height: 48px;
+}
+
+.advantage-header h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent-1);
+}
+
+.advantage-points {
+  display: grid;
+  gap: 20px;
+}
+
+.advantage-point {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.point-icon {
+  color: var(--accent-1);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.point-text {
+  color: var(--gray-4);
+  font-weight: 500;
+}
+
+.alternatives {
+  display: grid;
+  gap: 30px;
+}
+
+.alternative-option {
+  background: var(--primary-light);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.alternative-option h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--gray-4);
+}
+
+.alternative-points {
+  display: grid;
+  gap: 15px;
+}
+
+.alt-point {
+  font-size: 16px;
+  padding: 10px 0;
+}
+
+.alt-point.negative {
+  color: #dc2626;
+}
+
+.alt-point.warning {
+  color: #d97706;
+}
+
+.differentiation-cta {
+  text-align: center;
+  margin-top: 60px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* PRICING TRANSPARENCY */
+.pricing-transparency {
+  padding: 100px 20px;
+}
+
+.pricing-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  margin-bottom: 80px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pricing-preview-card {
+  background: var(--primary-light);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.pricing-preview-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-preview-card.featured {
+  border: 3px solid var(--accent-1);
+  transform: scale(1.05);
+}
+
+.popular-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--accent-1);
+  color: var(--primary-light);
+  padding: 5px 15px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.pricing-preview-card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--primary-dark);
+}
+
+.price-range {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--accent-1);
+  margin-bottom: 10px;
+}
+
+.price-timeline {
+  font-size: 16px;
+  color: var(--gray-3);
+  margin-bottom: 20px;
+}
+
+.price-description {
+  font-size: 16px;
+  color: var(--gray-4);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.price-ideal {
+  background: var(--gray-1);
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--gray-4);
+  font-weight: 500;
+}
+
+.pricing-transparency-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--primary-light);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.benefit-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.benefit-text {
+  font-size: 16px;
+  color: var(--gray-4);
+  font-weight: 500;
+}
+
+.pricing-cta {
+  text-align: center;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .comparison-preview {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .differentiation-cta,
+  .pricing-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pricing-preview-card.featured {
+    transform: none;
+    margin: 20px 0;
+  }
+  
+  .section-header h2 {
+    font-size: 32px;
+  }
+  
+  .advantage-header h3 {
+    font-size: 24px;
+  }
+  
+  .price-range {
+    font-size: 28px;
+  }
+}
