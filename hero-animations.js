@@ -282,12 +282,12 @@ class HeroAnimations {
     const afterMetric = document.querySelector('[data-after]');
     
     if (beforeMetric) {
-      this.countAnimation(beforeMetric, 0, 40, 1000, '%');
+      this.countAnimation(beforeMetric, 0, 22, 1000, '%');
     }
     
     if (afterMetric) {
       setTimeout(() => {
-        this.countAnimation(afterMetric, 40, 92, 1500, '%');
+        this.countAnimation(afterMetric, 22, 40, 1500, '%');
       }, 1000);
     }
   }
