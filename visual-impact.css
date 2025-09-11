@@ -738,14 +738,23 @@
   }
 }/* SMB/Mid-Market Positioning Styles */
 
-/* Rolling Text Animation */
+/* Rolling Text Animation - Now Static */
 .rolling-text {
   color: var(--accent);
   font-weight: 800;
-  display: inline-block;
-  position: relative;
-  text-align: left;
+  display: inline;
+  white-space: nowrap;
   vertical-align: baseline;
+  text-align: left;
+}
+
+.hero-title-line1 {
+  white-space: nowrap;
+  display: inline;
+}
+
+.hero-title-line2 {
+  display: inline;
 }
 
 /* Hero Value Props */
