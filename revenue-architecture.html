@@ -4,57 +4,395 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Revenue Architecture - Strategic Success Lab</title>
-  <meta name="description" content="Deep dive into our Revenue Architecture methodology. Build scalable revenue systems that convert.">
+  <meta name="description" content="Build scalable revenue systems that convert. Get your custom revenue assessment and pipeline calculator.">
   <link rel="icon" href="assets/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="theme-premium.css">
+  <link rel="stylesheet" href="homepage-restructure.css">
+  <link rel="stylesheet" href="service-pages.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <div class="brand"><a href="/" style="color: inherit; text-decoration: none;">Strategic Success Lab</a></div>
-      <nav>
-        <a href="/#value">Services</a>
-        <a href="/#work">Work</a>
-        <a href="/#approach">Approach</a>
-        <a href="/#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero container">
-    <h1>Revenue Architecture</h1>
-    <p class="sub">I've built revenue systems that generated $25M+ in pipeline. Here's the complete methodology.</p>
-    <div class="cta-row">
-      <a class="btn btn-premium" href="/#contact">Get Your Revenue Audit</a>
-    </div>
-  </section>
-
-  <section class="section container">
-    <h2>Deep Dive Content Coming Soon</h2>
-    <p>This page will contain comprehensive case studies, detailed methodologies, and implementation frameworks for Revenue Architecture.</p>
-    <div class="cards">
-      <div class="card">
-        <h3>What You'll Find Here</h3>
-        <ul>
-          <li>Complete Revenue Framework breakdown</li>
-          <li>Detailed case studies with metrics</li>
-          <li>Implementation playbooks</li>
-          <li>Templates and frameworks</li>
-          <li>ROI calculators</li>
-        </ul>
+  <!-- Navigation -->
+  <nav id="main-nav" class="nav-main fixed-nav">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <img src="assets/ssl-logo.png" alt="Strategic Success Lab" class="brand-logo">
+      </div>
+      <div class="nav-links">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/services.html" class="nav-link">Services</a>
+        <a href="/case-studies.html" class="nav-link">Case Studies</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/contact.html" class="nav-link nav-cta">Contact</a>
       </div>
     </div>
-    <a href="/" class="btn">← Back to Main Site</a>
+  </nav>
+
+  <!-- 1. SERVICE HERO -->
+  <section class="service-hero revenue-hero">
+    <div class="service-hero-bg">
+      <div class="dashboard-visual">
+        <div class="chart-grid">
+          <div class="chart-item">
+            <div class="metric-card">
+              <div class="metric-value">347%</div>
+              <div class="metric-label">Pipeline Growth</div>
+            </div>
+          </div>
+          <div class="chart-item">
+            <div class="progress-ring">
+              <svg class="progress-circle" width="60" height="60">
+                <circle cx="30" cy="30" r="25" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+                <circle cx="30" cy="30" r="25" fill="none" stroke="#00D4AA" stroke-width="2" stroke-dasharray="100" stroke-dashoffset="25" class="progress-bar"/>
+              </svg>
+              <div class="ring-text">75%</div>
+            </div>
+          </div>
+          <div class="chart-item">
+            <div class="trend-line">
+              <div class="trend-points">
+                <div class="point" style="height: 20%"></div>
+                <div class="point" style="height: 45%"></div>
+                <div class="point" style="height: 75%"></div>
+                <div class="point" style="height: 90%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="service-hero-content">
+      <h1 class="service-title">Revenue Architecture</h1>
+      <p class="service-subtitle">Build scalable revenue systems that convert prospects into predictable pipeline. Get your complete revenue assessment and custom growth strategy.</p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number">$25M+</div>
+          <div class="stat-label">Pipeline Generated</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">18</div>
+          <div class="stat-label">Companies Scaled</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">90 Days</div>
+          <div class="stat-label">Average Results</div>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="#calculator" class="btn-primary">Get Revenue Assessment</a>
+        <a href="#approach" class="btn-secondary">See Methodology</a>
+      </div>
+    </div>
   </section>
 
+  <!-- 2. PROBLEM THIS SOLVES -->
+  <section class="service-section problem-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Revenue Systems That Actually Scale</h2>
+        <p>Most companies hit revenue plateaus because they lack systematic architecture. Here's what we fix:</p>
+      </div>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-icon">📉</div>
+          <h3>Inconsistent Pipeline</h3>
+          <p>Feast or famine cycles due to lack of systematic lead generation and nurturing processes.</p>
+          <div class="problem-impact">Result: 40% revenue volatility</div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">🎯</div>
+          <h3>Poor Conversion Rates</h3>
+          <p>Prospects fall through cracks without clear progression paths and automated follow-up sequences.</p>
+          <div class="problem-impact">Result: 15-20% lower conversions</div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">📊</div>
+          <h3>No Revenue Predictability</h3>
+          <p>Can't forecast accurately without systematic tracking of leading indicators and pipeline health.</p>
+          <div class="problem-impact">Result: Planning chaos</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. OUR APPROACH -->
+  <section id="approach" class="service-section approach-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our 3-Phase Revenue Architecture Process</h2>
+        <p>Systematic approach to building scalable, predictable revenue systems</p>
+      </div>
+      <div class="approach-timeline">
+        <div class="approach-step">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3>Revenue Audit & Strategy</h3>
+            <p>Deep dive analysis of current systems, bottlenecks, and opportunities. Create custom revenue architecture blueprint.</p>
+            <div class="step-deliverables">
+              <span>Revenue Health Score</span>
+              <span>Growth Strategy Map</span>
+              <span>90-Day Action Plan</span>
+            </div>
+          </div>
+          <div class="step-visual">
+            <div class="audit-icon">🔍</div>
+          </div>
+        </div>
+        
+        <div class="approach-step">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3>System Implementation</h3>
+            <p>Build and deploy automated lead generation, nurturing sequences, and conversion optimization systems.</p>
+            <div class="step-deliverables">
+              <span>Automated Funnels</span>
+              <span>CRM Setup</span>
+              <span>Lead Scoring</span>
+            </div>
+          </div>
+          <div class="step-visual">
+            <div class="build-icon">⚡</div>
+          </div>
+        </div>
+        
+        <div class="approach-step">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3>Optimization & Scale</h3>
+            <p>Continuous testing, refinement, and scaling based on data. Achieve predictable, scalable growth.</p>
+            <div class="step-deliverables">
+              <span>Performance Dashboards</span>
+              <span>Growth Playbooks</span>
+              <span>Team Training</span>
+            </div>
+          </div>
+          <div class="step-visual">
+            <div class="scale-icon">📈</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. DELIVERABLES GRID -->
+  <section class="service-section deliverables-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>What You Actually Get</h2>
+        <p>Comprehensive deliverables that transform your revenue operations</p>
+      </div>
+      <div class="deliverables-grid">
+        <div class="deliverable-card">
+          <div class="deliverable-icon">📋</div>
+          <h3>Revenue Audit Report</h3>
+          <p>Complete analysis of current systems with specific improvement recommendations and priority rankings.</p>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🎯</div>
+          <h3>Lead Generation System</h3>
+          <p>Multi-channel lead gen machine with automated nurturing, scoring, and handoff processes.</p>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">📊</div>
+          <h3>Revenue Dashboard</h3>
+          <p>Real-time visibility into pipeline health, conversion metrics, and forecasting accuracy.</p>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">⚡</div>
+          <h3>Automation Workflows</h3>
+          <p>Email sequences, follow-up cadences, and trigger-based actions that run your revenue engine.</p>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">📈</div>
+          <h3>Growth Playbooks</h3>
+          <p>Step-by-step guides for scaling each component of your revenue system as you grow.</p>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🎓</div>
+          <h3>Team Training</h3>
+          <p>Complete onboarding and ongoing coaching to ensure your team maximizes system effectiveness.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CASE STUDY CAROUSEL -->
+  <section class="service-section case-studies-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Revenue Results That Speak</h2>
+        <p>Real results from companies that implemented our Revenue Architecture</p>
+      </div>
+      <div class="case-study-carousel">
+        <div class="case-study-card active">
+          <div class="case-study-header">
+            <h3>SaaS Platform</h3>
+            <div class="case-study-metrics">
+              <span class="metric">$2M→$8M ARR</span>
+              <span class="timeframe">18 months</span>
+            </div>
+          </div>
+          <div class="case-study-content">
+            <p>Implemented systematic lead scoring and automated nurturing that increased conversion rates by 240% while reducing sales cycle length by 30%.</p>
+            <div class="case-study-results">
+              <div class="result-item">
+                <div class="result-number">240%</div>
+                <div class="result-label">Conversion Increase</div>
+              </div>
+              <div class="result-item">
+                <div class="result-number">30%</div>
+                <div class="result-label">Shorter Sales Cycle</div>
+              </div>
+              <div class="result-item">
+                <div class="result-number">4x</div>
+                <div class="result-label">Revenue Growth</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. ROI CALCULATOR -->
+  <section id="calculator" class="service-section calculator-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Revenue Pipeline Calculator</h2>
+        <p>Calculate your potential revenue impact with optimized systems</p>
+      </div>
+      <div class="calculator-container">
+        <div class="calculator-inputs">
+          <div class="input-group">
+            <label>Monthly Leads</label>
+            <input type="number" id="monthlyLeads" value="500" min="10" max="10000">
+          </div>
+          <div class="input-group">
+            <label>Current Conversion Rate (%)</label>
+            <input type="number" id="conversionRate" value="3" min="0.1" max="20" step="0.1">
+          </div>
+          <div class="input-group">
+            <label>Average Deal Size ($)</label>
+            <input type="number" id="dealSize" value="5000" min="100" max="100000">
+          </div>
+        </div>
+        <div class="calculator-results">
+          <div class="result-card current">
+            <h3>Current Monthly Revenue</h3>
+            <div class="result-value" id="currentRevenue">$75,000</div>
+          </div>
+          <div class="result-card optimized">
+            <h3>Optimized Monthly Revenue</h3>
+            <div class="result-value" id="optimizedRevenue">$187,500</div>
+          </div>
+          <div class="result-card impact">
+            <h3>Annual Revenue Impact</h3>
+            <div class="result-value" id="annualImpact">$1,350,000</div>
+          </div>
+        </div>
+      </div>
+      <div class="calculator-cta">
+        <a href="/contact.html" class="btn-primary">Get Your Custom Assessment</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FAQ ACCORDION -->
+  <section class="service-section faq-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <div class="faq-question">How long does implementation take?</div>
+          <div class="faq-answer">Most revenue architecture projects take 60-90 days for full implementation, with initial improvements visible within the first 30 days. We work in phases so you see results quickly.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What if our current CRM isn't compatible?</div>
+          <div class="faq-answer">We work with all major CRMs (Salesforce, HubSpot, Pipedrive, etc.) and can recommend the best solution if a migration makes sense. Our systems are platform-agnostic.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Do you provide ongoing support after implementation?</div>
+          <div class="faq-answer">Yes. We include 90 days of optimization support with every project, plus ongoing monthly retainer options for continuous improvement and scaling.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What's the minimum company size you work with?</div>
+          <div class="faq-answer">We work best with companies doing $1M-$50M ARR with established product-market fit who need systematic revenue growth, not early-stage validation.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. SCHEDULE CONSULTATION CTA -->
+  <section class="service-section final-cta-section">
+    <div class="container">
+      <div class="final-cta-content">
+        <h2>Ready to Build Your Revenue Engine?</h2>
+        <p>Get your custom revenue architecture assessment and 90-day growth strategy. Book a strategy call to discuss your specific situation.</p>
+        <div class="cta-options">
+          <a href="/contact.html" class="btn-primary">Schedule Strategy Call</a>
+          <a href="/case-studies.html" class="btn-secondary">See More Results</a>
+        </div>
+        <div class="trust-signals">
+          <div class="trust-item">✓ $25M+ Pipeline Generated</div>
+          <div class="trust-item">✓ 90-Day Results Guarantee</div>
+          <div class="trust-item">✓ No Long-Term Contracts</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <span>© <span id="year"></span> Strategic Success Lab</span>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="assets/ssl-logo.png" alt="Strategic Success Lab" class="footer-logo">
+          <p>Revenue systems that scale.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Services</h4>
+            <a href="/revenue-architecture.html">Revenue Architecture</a>
+            <a href="/strategic-partnerships.html">Strategic Partnerships</a>
+            <a href="/ai-implementation.html">AI Implementation</a>
+          </div>
+          <div class="footer-column">
+            <h4>Company</h4>
+            <a href="/about.html">About</a>
+            <a href="/case-studies.html">Case Studies</a>
+            <a href="/contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Strategic Success Lab. Revenue systems that scale.</span>
+      </div>
     </div>
   </footer>
-
-  <script src="script.js"></script>
+  
+  <script src="service-calculator.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // FAQ Accordion functionality
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const item = question.parentElement;
+        const isActive = item.classList.contains('active');
+        
+        // Close all FAQ items
+        document.querySelectorAll('.faq-item').forEach(faqItem => {
+          faqItem.classList.remove('active');
+        });
+        
+        // Open clicked item if it wasn't active
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
