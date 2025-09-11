@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="navigation.css">
   <link rel="stylesheet" href="visual-impact.css">
   <link rel="stylesheet" href="interactive-showcases.css">
+  <link rel="stylesheet" href="mobile-excellence.css">
   <meta property="og:title" content="Strategic Success Lab">
   <meta property="og:description" content="Operator-grade consulting for revenue systems, pipeline partnerships, and practical AI.">
   <meta property="og:type" content="website">
@@ -159,16 +160,35 @@
       
       <!-- Interactive Process Diagram -->
       <div class="process-diagram">
-        <div class="process-step" data-step="1">
-          <div class="step-number">1</div>
-          <h3 class="step-title">Diagnose with Data</h3>
-          <p class="step-summary">We start with what's actually happening, not assumptions.</p>
-          <div class="step-details">
-            <p>Deep analysis of your current revenue flows, conversion bottlenecks, and performance metrics. We examine 200+ data points to identify the real issues blocking growth.</p>
-            <div class="step-tools">
-              <span class="tool-badge">Revenue Flow Analysis</span>
-              <span class="tool-badge">Process Mapping</span>
-              <span class="tool-badge">Performance Metrics</span>
+        <div class="process-step mobile-collapsible" data-step="1">
+          <div class="collapsible-header mobile-only">
+            <h3 class="collapsible-title">1. Diagnose with Data</h3>
+            <div class="collapsible-arrow"></div>
+          </div>
+          <div class="collapsible-content mobile-only">
+            <div class="collapsible-inner">
+              <p>We start with what's actually happening, not assumptions.</p>
+              <p>Deep analysis of your current revenue flows, conversion bottlenecks, and performance metrics. We examine 200+ data points to identify the real issues blocking growth.</p>
+              <div class="step-tools">
+                <span class="tool-badge">Revenue Flow Analysis</span>
+                <span class="tool-badge">Process Mapping</span>
+                <span class="tool-badge">Performance Metrics</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Desktop Version -->
+          <div class="desktop-only">
+            <div class="step-number">1</div>
+            <h3 class="step-title">Diagnose with Data</h3>
+            <p class="step-summary">We start with what's actually happening, not assumptions.</p>
+            <div class="step-details">
+              <p>Deep analysis of your current revenue flows, conversion bottlenecks, and performance metrics. We examine 200+ data points to identify the real issues blocking growth.</p>
+              <div class="step-tools">
+                <span class="tool-badge">Revenue Flow Analysis</span>
+                <span class="tool-badge">Process Mapping</span>
+                <span class="tool-badge">Performance Metrics</span>
+              </div>
             </div>
           </div>
         </div>
@@ -248,8 +268,16 @@
       <p class="section-subtitle">See the actual impact of our revenue architecture work.</p>
       
       <div class="before-after-container">
-        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop&auto=format" alt="Before: Chaotic Revenue Process" class="ba-image ba-before">
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop&auto=format" alt="After: Streamlined Revenue System" class="ba-image ba-after">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop&auto=format" 
+             alt="Before: Chaotic Revenue Process" 
+             class="ba-image ba-before" 
+             loading="lazy"
+             sizes="(max-width: 768px) 100vw, 800px">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop&auto=format" 
+             alt="After: Streamlined Revenue System" 
+             class="ba-image ba-after" 
+             loading="lazy"
+             sizes="(max-width: 768px) 100vw, 800px">
         <div class="ba-slider"></div>
         <div class="ba-handle"></div>
         <div class="ba-labels">
@@ -272,7 +300,7 @@
       <h2>Client Success Stories</h2>
       <p class="section-subtitle">Real results from real engagements. Filter by service area to see relevant examples.</p>
       
-      <div class="case-gallery-filters">
+      <div class="case-gallery-filters desktop-only">
         <button class="filter-btn filter-active" data-filter="all">All Projects</button>
         <button class="filter-btn" data-filter="revenue">Revenue Architecture</button>
         <button class="filter-btn" data-filter="partnerships">Strategic Partnerships</button>
@@ -280,14 +308,29 @@
         <button class="filter-btn" data-filter="design">Design & UX</button>
       </div>
       
+      <!-- Mobile: Simplified with swipe -->
+      <div class="mobile-only mobile-center" style="margin-bottom: 1rem;">
+        <h3>Swipe to explore case studies →</h3>
+      </div>
+      
       <div class="case-gallery">
         <div class="case-card" data-category="revenue">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&auto=format" alt="SaaS Revenue Transformation" class="case-image">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&auto=format" 
+             alt="SaaS Revenue Transformation" 
+             class="case-image" 
+             loading="lazy"
+             sizes="(max-width: 768px) 280px, 400px">
           <div class="case-content">
             <div class="case-category">Revenue Architecture</div>
             <h3 class="case-title">SaaS Revenue Transformation</h3>
             <p class="case-summary">Rebuilt sales process for 81% win rate improvement</p>
-            <a href="case-study-saas-revenue.html" class="btn btn-outline">View Full Case Study</a>
+            <div class="case-cta-group">
+              <a href="case-study-saas-revenue.html" class="btn btn-outline">View Full Case Study</a>
+              <a href="tel:+1-833-762-7384" class="mobile-phone-cta mobile-only touch-feedback" style="margin-top: 0.5rem;">
+                <span class="phone-icon">📞</span>
+                Call to Discuss
+              </a>
+            </div>
           </div>
           <div class="stats-overlay">
             <div class="overlay-stat">
@@ -517,8 +560,12 @@
         <h2>Ready to Professionalize Your Growth?</h2>
         <p>No six-figure retainers or enterprise complexity. Just revenue systems built for your actual team size and budget.</p>
         <div class="cta-buttons">
-          <a href="contact.html#strategy-call" class="btn btn-premium">Get Your Revenue Audit</a>
+          <a href="contact.html#strategy-call" class="btn btn-premium touch-feedback">Get Your Revenue Audit</a>
           <a href="case-studies.html" class="btn btn-ghost">Browse Case Studies</a>
+          <a href="tel:+1-833-762-7384" class="mobile-phone-cta mobile-only touch-feedback">
+            <span class="phone-icon">📞</span>
+            Call Now: (555) REVENUE
+          </a>
         </div>
       </div>
     </div>
@@ -564,5 +611,6 @@
   <script src="parallax-effects.js"></script>
   <script src="interactive-showcases.js" defer></script>
   <script src="rolling-text.js" defer></script>
+  <script src="mobile-excellence.js" defer></script>
 </body>
 </html>
