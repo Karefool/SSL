@@ -71,18 +71,12 @@
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Character reveal animation disabled - clean header design */
 .hero-title.text-reveal .char-animate {
   display: inline-block;
-  animation: charReveal 0.8s ease-out forwards;
-  opacity: 0;
-  transform: translateY(100px) rotateX(90deg);
-}
-
-@keyframes charReveal {
-  to {
-    opacity: 1;
-    transform: translateY(0) rotateX(0);
-  }
+  /* Animation removed for clean header */
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
 }
 
 .hero-subtitle {
@@ -93,19 +87,9 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.hero-subtitle.fade-in-up {
-  animation: fadeInUp 1s ease-out 0.8s forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  /* Animation removed for clean header design */
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Interactive Revenue Chart */

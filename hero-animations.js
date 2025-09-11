@@ -94,35 +94,11 @@ class HeroAnimations {
     animate();
   }
 
-  // Animated Text Reveal
+  // Text animations DISABLED for clean header design
   initTextAnimations() {
-    const heroTitle = document.querySelector('.hero-title');
-    const heroSubtitle = document.querySelector('.hero-subtitle');
-    
-    if (!heroTitle || !heroSubtitle) return;
-
-    // Split text into spans for animation
-    const splitText = (element) => {
-      const text = element.textContent;
-      element.innerHTML = '';
-      text.split('').forEach((char, index) => {
-        const span = document.createElement('span');
-        span.textContent = char === ' ' ? '\u00A0' : char;
-        span.style.animationDelay = `${index * 0.1}s`;
-        span.classList.add('char-animate');
-        element.appendChild(span);
-      });
-    };
-
-    splitText(heroTitle);
-    
-    // Trigger animations on load
-    setTimeout(() => {
-      heroTitle.classList.add('text-reveal');
-      setTimeout(() => {
-        heroSubtitle.classList.add('fade-in-up');
-      }, 800);
-    }, 500);
+    // All text animations disabled - header should be clean
+    // Only rolling industry text animation is allowed
+    return;
   }
 
   // Scroll-triggered Animations

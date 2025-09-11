@@ -63,11 +63,11 @@ class RollingTextAnimation {
 
 // Initialize rolling text animations when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-  // Hero industry animation
+  // Hero industry animation - forward rolling sequence only
   const heroIndustry = document.getElementById('rolling-industry');
   if (heroIndustry) {
     new RollingTextAnimation(heroIndustry, {
-      words: ['SaaS', 'Healthcare', 'FinTech', 'HR Tech', 'Insurance', 'Logistics', 'E-commerce', 'Professional Services', 'Manufacturing'],
+      words: ['SaaS', 'Insurance', 'IT', 'HR', 'E-Commerce'],
       duration: 2500
     });
   }
