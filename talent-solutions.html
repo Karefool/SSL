@@ -3,239 +3,359 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Talent Solutions — Strategic Success Lab</title>
-  <meta name="description" content="Build high-performing teams with proven hiring and enablement systems.">
+  <title>Talent Solutions - Strategic Success Lab</title>
+  <meta name="description" content="Build high-performing teams with strategic hiring and talent optimization. Calculate your cost of bad hires and get custom talent strategy.">
   <link rel="icon" href="assets/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="theme-premium.css">
-  <link rel="stylesheet" href="navigation.css">
+  <link rel="stylesheet" href="homepage-restructure.css">
+  <link rel="stylesheet" href="service-pages.css">
 </head>
 <body>
   <!-- Navigation -->
-  <nav class="main-navigation" id="mainNav">
+  <nav id="main-nav" class="nav-main fixed-nav">
     <div class="nav-container">
       <div class="nav-brand">
-        <a href="index.html">Strategic Success Lab</a>
+        <img src="assets/ssl-logo.png" alt="Strategic Success Lab" class="brand-logo">
       </div>
-      
-      <div class="nav-menu" id="navMenu">
-        <div class="nav-links">
-          <a href="index.html" class="nav-link">Home</a>
-          
-          <div class="nav-dropdown">
-            <a href="services.html" class="nav-link dropdown-trigger">
-              Services <span class="dropdown-arrow">▼</span>
-            </a>
-            <div class="dropdown-menu">
-              <a href="revenue-architecture.html" class="dropdown-link">Revenue Architecture</a>
-              <a href="strategic-partnerships.html" class="dropdown-link">Strategic Partnerships</a>
-              <a href="ai-implementation.html" class="dropdown-link">AI Implementation</a>
-              <a href="design-ux.html" class="dropdown-link">Design & UX</a>
-              <a href="talent-solutions.html" class="dropdown-link active">Talent Solutions</a>
-            </div>
-          </div>
-          
-          <a href="case-studies.html" class="nav-link">Case Studies</a>
-          <a href="about.html" class="nav-link">About</a>
-          <a href="resources.html" class="nav-link">Resources</a>
-          <a href="contact.html" class="nav-link">Contact</a>
-        </div>
-        
-        <a href="contact.html#strategy-call" class="nav-cta">Book Strategy Call</a>
-      </div>
-      
-      <div class="nav-toggle" id="navToggle">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class="nav-links">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/services.html" class="nav-link">Services</a>
+        <a href="/case-studies.html" class="nav-link">Case Studies</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/contact.html" class="nav-link nav-cta">Contact</a>
       </div>
     </div>
   </nav>
 
-  <!-- Service Hero -->
-  <section class="service-hero">
+  <!-- 1. SERVICE HERO -->
+  <section class="service-hero talent-hero">
+    <div class="service-hero-bg">
+      <div class="talent-visual">
+        <div class="team-grid">
+          <div class="team-member">👨‍💼</div>
+          <div class="team-member">👩‍💻</div>
+          <div class="team-member">👨‍🎨</div>
+          <div class="team-member">👩‍🔬</div>
+          <div class="team-member">👨‍🏭</div>
+          <div class="team-member">👩‍📊</div>
+          <div class="team-member">👨‍💡</div>
+          <div class="team-member">👩‍🚀</div>
+        </div>
+      </div>
+    </div>
+    <div class="service-hero-content">
+      <h1 class="service-title">Talent Solutions</h1>
+      <p class="service-subtitle">Build high-performing teams with strategic hiring, talent optimization, and performance systems. Reduce bad hires by 80% and accelerate team productivity with proven talent frameworks.</p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number">80%</div>
+          <div class="stat-label">Reduction in Bad Hires</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">67</div>
+          <div class="stat-label">Teams Optimized</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">45 Days</div>
+          <div class="stat-label">Average Time-to-Hire</div>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="#calculator" class="btn-primary">Calculate Bad Hire Costs</a>
+        <a href="#approach" class="btn-secondary">See Talent Process</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. PROBLEM THIS SOLVES -->
+  <section class="service-section problem-section">
     <div class="container">
-      <div class="service-hero-content">
-        <div class="service-icon-hero">👥</div>
-        <h1>Talent Solutions</h1>
-        <p class="hero-subtitle">Build high-performing teams with proven hiring and enablement systems.</p>
-        <div class="hero-metrics">
-          <div class="metric">
-            <span class="metric-number">60%</span>
-            <span class="metric-label">Faster Hiring</span>
-          </div>
-          <div class="metric">
-            <span class="metric-number">85%</span>
-            <span class="metric-label">Retention Rate</span>
-          </div>
+      <div class="section-header">
+        <h2>Talent Systems That Actually Work</h2>
+        <p>Most companies struggle with hiring and talent management because they lack strategic frameworks. Here's what we fix:</p>
+      </div>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-icon">❌</div>
+          <h3>High Cost of Bad Hires</h3>
+          <p>Poor hiring decisions cost companies 2.5x annual salary per bad hire in lost productivity, training costs, and team disruption.</p>
+          <div class="problem-impact">Result: $240K+ average cost per bad hire</div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">⏰</div>
+          <h3>Slow Hiring Processes</h3>
+          <p>Lengthy, unstructured hiring processes lose top candidates to competitors and create bottlenecks in team growth and productivity.</p>
+          <div class="problem-impact">Result: 73% candidate drop-off rates</div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">📉</div>
+          <h3>Poor Team Performance</h3>
+          <p>Lack of performance management systems, clear expectations, and development frameworks lead to underperforming teams and high turnover.</p>
+          <div class="problem-impact">Result: 40% higher turnover rates</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Problem Section -->
-  <section class="service-problem section">
+  <!-- 3. OUR APPROACH -->
+  <section id="approach" class="service-section approach-section">
     <div class="container">
-      <h2>The Problem You're Facing</h2>
-      <div class="problem-content">
-        <p>You're hiring but struggling with quality, speed, or retention. Your team needs systematic approaches to find, evaluate, and develop the right people for sustainable growth.</p>
+      <div class="section-header">
+        <h2>Our 3-Phase Talent Optimization Process</h2>
+        <p>Strategic approach to building high-performing teams through better hiring and talent management</p>
+      </div>
+      <div class="approach-timeline">
+        <div class="approach-step">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3>Talent Strategy & Assessment</h3>
+            <p>Analyze current hiring processes, team performance metrics, and talent gaps. Create strategic hiring plan aligned with business growth objectives.</p>
+            <div class="step-deliverables">
+              <span>Talent Audit Report</span>
+              <span>Hiring Strategy Plan</span>
+              <span>Role Definitions</span>
+            </div>
+          </div>
+          <div class="step-visual">
+            <div class="audit-icon">📋</div>
+          </div>
+        </div>
         
-        <div class="problem-points">
-          <div class="problem-point">
-            <h3>Hiring Lottery</h3>
-            <p>Inconsistent evaluation processes that miss top performers</p>
+        <div class="approach-step">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3>Hiring System Implementation</h3>
+            <p>Build structured interview processes, candidate evaluation frameworks, and onboarding systems that identify and attract top talent efficiently.</p>
+            <div class="step-deliverables">
+              <span>Interview Frameworks</span>
+              <span>Candidate Scorecards</span>
+              <span>Onboarding Systems</span>
+            </div>
           </div>
-          <div class="problem-point">
-            <h3>Slow Time-to-Value</h3>
-            <p>New hires take too long to become productive contributors</p>
+          <div class="step-visual">
+            <div class="build-icon">⚙️</div>
           </div>
-          <div class="problem-point">
-            <h3>Retention Issues</h3>
-            <p>Good people leave due to unclear growth paths or poor fit</p>
+        </div>
+        
+        <div class="approach-step">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3>Performance & Development</h3>
+            <p>Deploy performance management systems, career development frameworks, and team optimization strategies for sustained high performance.</p>
+            <div class="step-deliverables">
+              <span>Performance Systems</span>
+              <span>Development Plans</span>
+              <span>Team Dashboards</span>
+            </div>
+          </div>
+          <div class="step-visual">
+            <div class="scale-icon">📈</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Methodology Section -->
-  <section class="service-methodology section">
+  <!-- 4. DELIVERABLES GRID -->
+  <section class="service-section deliverables-section">
     <div class="container">
-      <h2>The SSL Talent System</h2>
-      <p class="section-subtitle">Our proven framework for building teams that perform consistently.</p>
-      
-      <div class="methodology-steps">
-        <div class="methodology-step">
-          <div class="step-number">1</div>
-          <div class="step-content">
-            <h3>Performance Profiling</h3>
-            <p>Define what top performance looks like for each role with specific, measurable criteria</p>
-          </div>
-        </div>
-        <div class="methodology-step">
-          <div class="step-number">2</div>
-          <div class="step-content">
-            <h3>Systematic Evaluation</h3>
-            <p>Build structured interview processes that identify high performers consistently</p>
-          </div>
-        </div>
-        <div class="methodology-step">
-          <div class="step-number">3</div>
-          <div class="step-content">
-            <h3>Accelerated Onboarding</h3>
-            <p>Create systems that get new hires to productivity faster through structured learning paths</p>
-          </div>
-        </div>
-        <div class="methodology-step">
-          <div class="step-number">4</div>
-          <div class="step-content">
-            <h3>Continuous Development</h3>
-            <p>Implement career progression systems that retain top talent through clear growth opportunities</p>
-          </div>
-        </div>
+      <div class="section-header">
+        <h2>Talent Solutions Deliverables</h2>
+        <p>Complete talent optimization package that builds high-performing teams</p>
       </div>
-    </div>
-  </section>
-
-  <!-- Case Studies -->
-  <section class="service-cases section">
-    <div class="container">
-      <h2>Recent Results</h2>
-      <div class="cases-grid">
-        <div class="case-study">
-          <h3>Tech Startup Hiring</h3>
-          <div class="case-metric">60% faster hiring</div>
-          <p>Built structured evaluation process that reduced time-to-hire while improving candidate quality and cultural fit.</p>
+      <div class="deliverables-grid">
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🎯</div>
+          <h3>Strategic Hiring Plan</h3>
+          <p>Comprehensive talent strategy with role priorities, hiring timelines, and budget optimization for maximum ROI.</p>
         </div>
-        <div class="case-study">
-          <h3>Sales Team Development</h3>
-          <div class="case-metric">85% retention rate</div>
-          <p>Created performance management and career progression system that retained top performers while improving overall team results.</p>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">📝</div>
+          <h3>Interview & Assessment Framework</h3>
+          <p>Structured interview processes, candidate evaluation scorecards, and skills assessments for consistent hiring decisions.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- What's Included -->
-  <section class="service-included section">
-    <div class="container">
-      <h2>What's Included</h2>
-      <div class="included-grid">
-        <div class="included-item">
-          <h3>Hiring Framework</h3>
-          <p>Structured processes for sourcing, evaluating, and selecting top performers for each role</p>
-        </div>
-        <div class="included-item">
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🚀</div>
           <h3>Onboarding System</h3>
-          <p>Accelerated learning paths that get new hires to full productivity in record time</p>
+          <p>Complete 30-60-90 day onboarding process that accelerates new hire productivity and integration.</p>
         </div>
-        <div class="included-item">
-          <h3>Performance Management</h3>
-          <p>Clear metrics and feedback systems that drive continuous improvement and accountability</p>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">📊</div>
+          <h3>Performance Management System</h3>
+          <p>Goal-setting frameworks, performance review processes, and tracking systems for continuous improvement.</p>
         </div>
-        <div class="included-item">
-          <h3>Career Development</h3>
-          <p>Progression paths and growth opportunities that retain top talent long-term</p>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🌟</div>
+          <h3>Career Development Framework</h3>
+          <p>Professional growth pathways, skill development plans, and retention strategies for top performers.</p>
         </div>
-        <div class="included-item">
-          <h3>Team Dynamics</h3>
-          <p>Collaboration frameworks and communication systems that optimize team performance</p>
-        </div>
-        <div class="included-item">
-          <h3>Implementation Support</h3>
-          <p>Hands-on guidance during rollout and ongoing optimization of talent systems</p>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">📈</div>
+          <h3>Team Analytics Dashboard</h3>
+          <p>Real-time visibility into team performance, hiring metrics, and talent pipeline health.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="service-cta section">
+  <!-- 5. CASE STUDY CAROUSEL -->
+  <section class="service-section case-studies-section">
     <div class="container">
-      <div class="cta-content">
-        <h2>Ready to Build Your Dream Team?</h2>
-        <p>Get a comprehensive talent audit and custom hiring roadmap for your organization.</p>
-        <div class="cta-buttons">
-          <a href="contact.html#strategy-call" class="btn btn-premium">Book Talent Consultation</a>
-          <a href="case-studies.html" class="btn btn-ghost">View Case Studies</a>
+      <div class="section-header">
+        <h2>Talent Success Stories</h2>
+        <p>Real outcomes from companies that optimized their talent systems</p>
+      </div>
+      <div class="case-study-carousel">
+        <div class="case-study-card active">
+          <div class="case-study-header">
+            <h3>Tech Startup Scale-Up</h3>
+            <div class="case-study-metrics">
+              <span class="metric">80% Fewer Bad Hires</span>
+              <span class="timeframe">12 months</span>
+            </div>
+          </div>
+          <div class="case-study-content">
+            <p>Implemented strategic hiring framework and performance systems that reduced bad hires by 80% and improved team productivity by 65% while scaling from 15 to 45 employees.</p>
+            <div class="case-study-results">
+              <div class="result-item">
+                <div class="result-number">80%</div>
+                <div class="result-label">Fewer Bad Hires</div>
+              </div>
+              <div class="result-item">
+                <div class="result-number">65%</div>
+                <div class="result-label">Productivity Increase</div>
+              </div>
+              <div class="result-item">
+                <div class="result-number">45 Days</div>
+                <div class="result-label">Time-to-Hire</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- 6. COST OF BAD HIRE CALCULATOR -->
+  <section id="calculator" class="service-section calculator-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Cost of Bad Hire Calculator</h2>
+        <p>Calculate the true financial impact of bad hires on your organization</p>
+      </div>
+      <div class="calculator-container">
+        <div class="cost-inputs">
+          <div class="cost-input-group">
+            <label>Average Salary ($)</label>
+            <input type="number" id="averageSalary" value="85000" min="30000" max="300000">
+          </div>
+          <div class="cost-input-group">
+            <label>Annual Turnover Rate (%)</label>
+            <input type="number" id="turnoverRate" value="15" min="1" max="50" step="0.5">
+          </div>
+          <div class="cost-input-group">
+            <label>Team Size</label>
+            <input type="number" id="teamSize" value="25" min="5" max="500">
+          </div>
+        </div>
+        <div class="cost-results">
+          <div class="cost-result-card bad-hire">
+            <h3>Cost Per Bad Hire</h3>
+            <div class="cost-result-value" id="costPerBadHire">$212,500</div>
+          </div>
+          <div class="cost-result-card annual-impact">
+            <h3>Annual Bad Hire Impact</h3>
+            <div class="cost-result-value" id="annualBadHireImpact">$797,500</div>
+          </div>
+        </div>
+      </div>
+      <div class="calculator-cta">
+        <a href="/contact.html" class="btn-primary">Schedule Talent Strategy Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FAQ ACCORDION -->
+  <section class="service-section faq-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Talent Solutions FAQ</h2>
+      </div>
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <div class="faq-question">How long does it take to implement a talent optimization system?</div>
+          <div class="faq-answer">Most talent system implementations take 6-8 weeks for initial setup, with full optimization occurring over 3-4 months. We work in phases so you see immediate improvements in hiring quality and team performance.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What's the typical ROI of improved hiring systems?</div>
+          <div class="faq-answer">Companies typically see 3-5x ROI within 12 months through reduced bad hire costs, faster time-to-productivity, and improved team performance. Bad hire cost reductions alone often justify the entire investment.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Do you work with companies of all sizes?</div>
+          <div class="faq-answer">We work best with growing companies (10-200 employees) that need systematic talent processes. Smaller teams benefit from our hiring frameworks, while larger companies leverage our performance and development systems.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How do you measure talent system success?</div>
+          <div class="faq-answer">We track multiple metrics including time-to-hire, candidate quality scores, new hire performance ratings, retention rates, and team productivity measures to ensure continuous improvement.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. SCHEDULE CONSULTATION CTA -->
+  <section class="service-section final-cta-section">
+    <div class="container">
+      <div class="final-cta-content">
+        <h2>Ready to Build Your High-Performance Team?</h2>
+        <p>Get your talent audit and custom hiring strategy. Schedule a strategy call to explore how optimized talent systems can accelerate your team's success.</p>
+        <div class="cta-options">
+          <a href="/contact.html" class="btn-primary">Schedule Talent Strategy Call</a>
+          <a href="/case-studies.html" class="btn-secondary">See Team Success Stories</a>
+        </div>
+        <div class="trust-signals">
+          <div class="trust-item">✓ 80% Reduction in Bad Hires</div>
+          <div class="trust-item">✓ 45-Day Time-to-Hire Average</div>
+          <div class="trust-item">✓ Complete Talent Framework</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-content">
         <div class="footer-brand">
-          <div class="brand">Strategic Success Lab</div>
-          <p>Operator-grade consulting for high-growth teams.</p>
+          <img src="assets/ssl-logo.png" alt="Strategic Success Lab" class="footer-logo">
+          <p>Talent systems that perform.</p>
         </div>
         <div class="footer-links">
           <div class="footer-column">
             <h4>Services</h4>
-            <a href="revenue-architecture.html">Revenue Architecture</a>
-            <a href="strategic-partnerships.html">Strategic Partnerships</a>
-            <a href="ai-implementation.html">AI Implementation</a>
-            <a href="design-ux.html">Design & UX</a>
-            <a href="talent-solutions.html">Talent Solutions</a>
+            <a href="/revenue-architecture.html">Revenue Architecture</a>
+            <a href="/strategic-partnerships.html">Strategic Partnerships</a>
+            <a href="/ai-implementation.html">AI Implementation</a>
+            <a href="/design-ux.html">Design & UX</a>
+            <a href="/talent-solutions.html">Talent Solutions</a>
           </div>
           <div class="footer-column">
             <h4>Company</h4>
-            <a href="about.html">About</a>
-            <a href="case-studies.html">Case Studies</a>
-            <a href="resources.html">Resources</a>
-            <a href="contact.html">Contact</a>
+            <a href="/about.html">About</a>
+            <a href="/case-studies.html">Case Studies</a>
+            <a href="/contact.html">Contact</a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© <span id="year"></span> Strategic Success Lab</span>
+        <span>© <span id="year"></span> Strategic Success Lab. Talent systems that perform.</span>
       </div>
     </div>
   </footer>
-
-  <script src="script.js"></script>
-  <script src="navigation.js"></script>
+  
+  <script src="service-calculator.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

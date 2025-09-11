@@ -21,6 +21,457 @@
   background: linear-gradient(135deg, #001f3f 0%, #1a0033 30%, #2d1b3e 70%, #1a0033 100%);
 }
 
+/* AI Implementation Hero */
+.ai-hero {
+  background: linear-gradient(135deg, #0a0a2e 0%, #16213e 30%, #0f3460 70%, #1a0033 100%);
+}
+
+/* Design & UX Hero */
+.design-hero {
+  background: linear-gradient(135deg, #2d1b3e 0%, #1a0033 30%, #4a1a4a 70%, #2d1b3e 100%);
+}
+
+/* Talent Solutions Hero */
+.talent-hero {
+  background: linear-gradient(135deg, #1a0033 0%, #4a1a4a 30%, #2d1b3e 70%, #001f3f 100%);
+}
+
+/* Talent Team Visual */
+.talent-visual {
+  position: absolute;
+  top: 8%;
+  right: 6%;
+  width: 320px;
+  height: 200px;
+  opacity: 0.7;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 15px;
+  width: 100%;
+  height: 100%;
+}
+
+.team-member {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  border: 3px solid rgba(0, 212, 170, 0.4);
+  animation: teamPulse 4s ease-in-out infinite;
+  position: relative;
+}
+
+.team-member:nth-child(1) { 
+  background: linear-gradient(135deg, #FF6B6B, #4ECDC4); 
+  animation-delay: 0s; 
+}
+.team-member:nth-child(2) { 
+  background: linear-gradient(135deg, #45B7D1, #96CEB4); 
+  animation-delay: 0.3s; 
+}
+.team-member:nth-child(3) { 
+  background: linear-gradient(135deg, #FFECD2, #FCB69F); 
+  animation-delay: 0.6s; 
+}
+.team-member:nth-child(4) { 
+  background: linear-gradient(135deg, #A8EDEA, #FED6E3); 
+  animation-delay: 0.9s; 
+}
+.team-member:nth-child(5) { 
+  background: linear-gradient(135deg, #D299C2, #FEF9D7); 
+  animation-delay: 1.2s; 
+}
+.team-member:nth-child(6) { 
+  background: linear-gradient(135deg, #89F7FE, #66A6FF); 
+  animation-delay: 1.5s; 
+}
+.team-member:nth-child(7) { 
+  background: linear-gradient(135deg, #FDBB2D, #22C1C3); 
+  animation-delay: 1.8s; 
+}
+.team-member:nth-child(8) { 
+  background: linear-gradient(135deg, #667eea, #764ba2); 
+  animation-delay: 2.1s; 
+}
+
+@keyframes teamPulse {
+  0%, 100% {
+    transform: scale(1);
+    border-color: rgba(0, 212, 170, 0.4);
+  }
+  50% {
+    transform: scale(1.1);
+    border-color: rgba(0, 212, 170, 0.8);
+  }
+}
+
+/* Cost Calculator Styling */
+.cost-inputs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.cost-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cost-input-group label {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cost-input-group input {
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.cost-input-group input:focus {
+  outline: none;
+  border-color: #00D4AA;
+  box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.2);
+}
+
+.cost-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cost-result-card {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.cost-result-card.bad-hire {
+  background: rgba(255, 107, 53, 0.2);
+  border: 1px solid rgba(255, 107, 53, 0.3);
+}
+
+.cost-result-card.annual-impact {
+  background: rgba(11, 95, 255, 0.2);
+  border: 1px solid rgba(11, 95, 255, 0.3);
+}
+
+.cost-result-card h3 {
+  font-size: 16px;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.cost-result-value {
+  font-size: 32px;
+  font-weight: 800;
+  color: white;
+}
+
+/* Design Portfolio Visual */
+.design-visual {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  width: 350px;
+  height: 250px;
+  opacity: 0.8;
+}
+
+.design-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+}
+
+.design-card {
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  animation: designFloat 6s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.design-card:nth-child(1) { 
+  background: linear-gradient(135deg, #FF6B6B, #4ECDC4); 
+  animation-delay: 0s; 
+}
+.design-card:nth-child(2) { 
+  background: linear-gradient(135deg, #45B7D1, #96CEB4); 
+  animation-delay: 0.5s; 
+}
+.design-card:nth-child(3) { 
+  background: linear-gradient(135deg, #FFECD2, #FCB69F); 
+  animation-delay: 1s; 
+}
+.design-card:nth-child(4) { 
+  background: linear-gradient(135deg, #A8EDEA, #FED6E3); 
+  animation-delay: 1.5s; 
+}
+.design-card:nth-child(5) { 
+  background: linear-gradient(135deg, #D299C2, #FEF9D7); 
+  animation-delay: 2s; 
+}
+.design-card:nth-child(6) { 
+  background: linear-gradient(135deg, #89F7FE, #66A6FF); 
+  animation-delay: 2.5s; 
+}
+
+@keyframes designFloat {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  33% {
+    transform: translateY(-8px) scale(1.05);
+  }
+  66% {
+    transform: translateY(-4px) scale(0.98);
+  }
+}
+
+/* Portfolio Gallery */
+.portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.portfolio-item {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(26, 0, 51, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 64px rgba(26, 0, 51, 0.15);
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: white;
+}
+
+.portfolio-content {
+  padding: 1.5rem;
+}
+
+.portfolio-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a0033;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-description {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.portfolio-metrics {
+  display: flex;
+  gap: 1rem;
+  font-size: 12px;
+}
+
+.portfolio-metric {
+  background: rgba(11, 95, 255, 0.1);
+  color: #0B5FFF;
+  padding: 0.3rem 0.8rem;
+  border-radius: 16px;
+  font-weight: 600;
+}
+
+.gallery-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.8rem 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* AI Circuit Visual */
+.ai-visual {
+  position: absolute;
+  top: 10%;
+  right: 8%;
+  width: 300px;
+  height: 220px;
+  opacity: 0.7;
+}
+
+.circuit-board {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.circuit-node {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(11, 95, 255, 0.2);
+  border: 2px solid #0B5FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: aiPulse 2s ease-in-out infinite;
+}
+
+.node-core {
+  font-size: 24px;
+  z-index: 2;
+}
+
+.data-pulse {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 212, 170, 0.6);
+  animation: dataPulse 3s ease-in-out infinite;
+}
+
+.circuit-path {
+  position: absolute;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(11, 95, 255, 0.4), rgba(0, 212, 170, 0.4));
+  border-radius: 2px;
+}
+
+.path-1 {
+  top: 35%;
+  left: 15%;
+  width: 120px;
+  transform: rotate(25deg);
+}
+
+.path-2 {
+  top: 60%;
+  right: 20%;
+  width: 90px;
+  transform: rotate(-35deg);
+}
+
+.path-3 {
+  bottom: 25%;
+  left: 25%;
+  width: 140px;
+  transform: rotate(15deg);
+}
+
+.data-flow {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #00D4AA;
+  animation: dataFlow 4s linear infinite;
+}
+
+.flow-1 {
+  top: 35%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.flow-2 {
+  top: 60%;
+  right: 20%;
+  animation-delay: 2s;
+}
+
+@keyframes aiPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(11, 95, 255, 0.4);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(11, 95, 255, 0.6);
+  }
+}
+
+@keyframes dataPulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes dataFlow {
+  0% {
+    opacity: 0;
+    transform: translateX(0) translateY(0);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(120px) translateY(-30px);
+  }
+}
+
 /* Partnership Network Visual */
 .network-visual {
   position: absolute;

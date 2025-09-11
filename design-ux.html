@@ -3,239 +3,437 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Design & UX — Strategic Success Lab</title>
-  <meta name="description" content="Products users actually adopt. Teams that actually perform. Systems that actually scale.">
+  <title>Design & UX - Strategic Success Lab</title>
+  <meta name="description" content="Design and UX that drives business results. Portfolio showcase and design process that converts users into customers.">
   <link rel="icon" href="assets/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="theme-premium.css">
-  <link rel="stylesheet" href="navigation.css">
+  <link rel="stylesheet" href="homepage-restructure.css">
+  <link rel="stylesheet" href="service-pages.css">
 </head>
 <body>
   <!-- Navigation -->
-  <nav class="main-navigation" id="mainNav">
+  <nav id="main-nav" class="nav-main fixed-nav">
     <div class="nav-container">
       <div class="nav-brand">
-        <a href="index.html">Strategic Success Lab</a>
+        <img src="assets/ssl-logo.png" alt="Strategic Success Lab" class="brand-logo">
       </div>
-      
-      <div class="nav-menu" id="navMenu">
-        <div class="nav-links">
-          <a href="index.html" class="nav-link">Home</a>
-          
-          <div class="nav-dropdown">
-            <a href="services.html" class="nav-link dropdown-trigger">
-              Services <span class="dropdown-arrow">▼</span>
-            </a>
-            <div class="dropdown-menu">
-              <a href="revenue-architecture.html" class="dropdown-link">Revenue Architecture</a>
-              <a href="strategic-partnerships.html" class="dropdown-link">Strategic Partnerships</a>
-              <a href="ai-implementation.html" class="dropdown-link">AI Implementation</a>
-              <a href="design-ux.html" class="dropdown-link active">Design & UX</a>
-              <a href="talent-solutions.html" class="dropdown-link">Talent Solutions</a>
-            </div>
-          </div>
-          
-          <a href="case-studies.html" class="nav-link">Case Studies</a>
-          <a href="about.html" class="nav-link">About</a>
-          <a href="resources.html" class="nav-link">Resources</a>
-          <a href="contact.html" class="nav-link">Contact</a>
-        </div>
-        
-        <a href="contact.html#strategy-call" class="nav-cta">Book Strategy Call</a>
-      </div>
-      
-      <div class="nav-toggle" id="navToggle">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class="nav-links">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/services.html" class="nav-link">Services</a>
+        <a href="/case-studies.html" class="nav-link">Case Studies</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/contact.html" class="nav-link nav-cta">Contact</a>
       </div>
     </div>
   </nav>
 
-  <!-- Service Hero -->
-  <section class="service-hero">
+  <!-- 1. SERVICE HERO -->
+  <section class="service-hero design-hero">
+    <div class="service-hero-bg">
+      <div class="design-visual">
+        <div class="design-grid">
+          <div class="design-card">🎨</div>
+          <div class="design-card">✨</div>
+          <div class="design-card">🚀</div>
+          <div class="design-card">💡</div>
+          <div class="design-card">🎯</div>
+          <div class="design-card">⚡</div>
+        </div>
+      </div>
+    </div>
+    <div class="service-hero-content">
+      <h1 class="service-title">Design & UX</h1>
+      <p class="service-subtitle">Design and user experiences that drive real business results. From concept to conversion, we create interfaces that users love and that deliver measurable ROI.</p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number">89%</div>
+          <div class="stat-label">User Engagement Increase</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">42</div>
+          <div class="stat-label">Design Projects Completed</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">156%</div>
+          <div class="stat-label">Average Conversion Lift</div>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="#portfolio" class="btn-primary">View Design Portfolio</a>
+        <a href="#approach" class="btn-secondary">See Design Process</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. PROBLEM THIS SOLVES -->
+  <section class="service-section problem-section">
     <div class="container">
-      <div class="service-hero-content">
-        <div class="service-icon-hero">🎨</div>
-        <h1>Design & UX</h1>
-        <p class="hero-subtitle">Products users actually adopt. Teams that actually perform. Systems that actually scale.</p>
-        <div class="hero-metrics">
-          <div class="metric">
-            <span class="metric-number">45%</span>
-            <span class="metric-label">Adoption Increase</span>
-          </div>
-          <div class="metric">
-            <span class="metric-number">67%</span>
-            <span class="metric-label">Training Retention</span>
-          </div>
+      <div class="section-header">
+        <h2>Design That Actually Converts</h2>
+        <p>Most companies struggle with design that looks good but doesn't drive business results. Here's what we fix:</p>
+      </div>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-icon">🎨</div>
+          <h3>Pretty But Doesn't Convert</h3>
+          <p>Beautiful designs that don't drive user action or business outcomes due to poor UX strategy and conversion optimization.</p>
+          <div class="problem-impact">Result: Low conversion rates despite high traffic</div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">📱</div>
+          <h3>Poor User Experience</h3>
+          <p>Confusing navigation, slow load times, and mobile-unfriendly designs that frustrate users and increase bounce rates.</p>
+          <div class="problem-impact">Result: 73% higher user abandonment rates</div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">🔄</div>
+          <h3>Inconsistent Brand Experience</h3>
+          <p>Fragmented design systems and inconsistent brand application across touchpoints that confuse customers and dilute brand value.</p>
+          <div class="problem-impact">Result: Reduced brand recognition and trust</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Problem Section -->
-  <section class="service-problem section">
+  <!-- 3. OUR APPROACH -->
+  <section id="approach" class="service-section approach-section">
     <div class="container">
-      <h2>The Problem You're Facing</h2>
-      <div class="problem-content">
-        <p>Your product looks good but users struggle with adoption. You've invested in "beautiful" interfaces that prioritize aesthetics over usability, creating friction that reduces both user satisfaction and team performance.</p>
+      <div class="section-header">
+        <h2>Our 3-Phase Design Process</h2>
+        <p>Strategic design approach that creates user experiences driving measurable business impact</p>
+      </div>
+      <div class="approach-timeline">
+        <div class="approach-step">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3>Research & Strategy</h3>
+            <p>Deep dive into user behavior, competitor analysis, and business goals to create data-driven design strategy and user journey mapping.</p>
+            <div class="step-deliverables">
+              <span>User Research Report</span>
+              <span>Design Strategy</span>
+              <span>Journey Mapping</span>
+            </div>
+          </div>
+          <div class="step-visual">
+            <div class="audit-icon">🔍</div>
+          </div>
+        </div>
         
-        <div class="problem-points">
-          <div class="problem-point">
-            <h3>Interface Theater</h3>
-            <p>Pretty designs that confuse users and slow down workflows</p>
-          </div>
-          <div class="problem-point">
-            <h3>Adoption Struggles</h3>
-            <p>Users avoid your tools or need constant support to use them</p>
-          </div>
-          <div class="problem-point">
-            <h3>Performance Friction</h3>
-            <p>Design decisions that look good but make teams less productive</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Methodology Section -->
-  <section class="service-methodology section">
-    <div class="container">
-      <h2>The SSL Design System</h2>
-      <p class="section-subtitle">Our proven framework for building products that users actually want to use.</p>
-      
-      <div class="methodology-steps">
-        <div class="methodology-step">
-          <div class="step-number">1</div>
+        <div class="approach-step">
+          <div class="step-number">02</div>
           <div class="step-content">
-            <h3>User Reality Audit</h3>
-            <p>Map actual user workflows and identify real friction points through observation and data analysis</p>
+            <h3>Design & Prototyping</h3>
+            <p>Create high-fidelity designs, interactive prototypes, and comprehensive design systems that align with business objectives and user needs.</p>
+            <div class="step-deliverables">
+              <span>Design System</span>
+              <span>Interactive Prototypes</span>
+              <span>Visual Assets</span>
+            </div>
+          </div>
+          <div class="step-visual">
+            <div class="build-icon">✏️</div>
           </div>
         </div>
-        <div class="methodology-step">
-          <div class="step-number">2</div>
+        
+        <div class="approach-step">
+          <div class="step-number">03</div>
           <div class="step-content">
-            <h3>Performance-First Design</h3>
-            <p>Design interfaces that optimize for user productivity and task completion, not just visual appeal</p>
+            <h3>Testing & Optimization</h3>
+            <p>Deploy designs with A/B testing, user feedback collection, and continuous optimization based on performance metrics and user behavior data.</p>
+            <div class="step-deliverables">
+              <span>A/B Test Results</span>
+              <span>Performance Analytics</span>
+              <span>Optimization Reports</span>
+            </div>
           </div>
-        </div>
-        <div class="methodology-step">
-          <div class="step-number">3</div>
-          <div class="step-content">
-            <h3>Scalable Systems</h3>
-            <p>Build design systems and component libraries that maintain consistency as your product grows</p>
-          </div>
-        </div>
-        <div class="methodology-step">
-          <div class="step-number">4</div>
-          <div class="step-content">
-            <h3>Continuous Optimization</h3>
-            <p>Implement user testing and data-driven iteration to continuously improve adoption and performance</p>
+          <div class="step-visual">
+            <div class="scale-icon">📊</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Case Studies -->
-  <section class="service-cases section">
+  <!-- 4. DELIVERABLES GRID -->
+  <section class="service-section deliverables-section">
     <div class="container">
-      <h2>Recent Results</h2>
-      <div class="cases-grid">
-        <div class="case-study">
-          <h3>SaaS Platform Redesign</h3>
-          <div class="case-metric">45% adoption increase</div>
-          <p>Redesigned complex dashboard to prioritize user workflows over visual complexity. Users now complete core tasks 60% faster.</p>
+      <div class="section-header">
+        <h2>Design & UX Deliverables</h2>
+        <p>Complete design package that transforms your user experience and drives business results</p>
+      </div>
+      <div class="deliverables-grid">
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🎨</div>
+          <h3>Complete Design System</h3>
+          <p>Comprehensive design system with components, typography, colors, and guidelines for consistent brand application.</p>
         </div>
-        <div class="case-study">
-          <h3>Internal Tool Optimization</h3>
-          <div class="case-metric">67% training retention</div>
-          <p>Built role simulation methodology for accelerated learning, reducing onboarding time while improving long-term user proficiency.</p>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">📱</div>
+          <h3>Responsive Web & Mobile Designs</h3>
+          <p>Optimized designs for all devices with mobile-first approach and responsive breakpoints for seamless user experience.</p>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🔄</div>
+          <h3>Interactive Prototypes</h3>
+          <p>Clickable prototypes that demonstrate user flows, interactions, and functionality before development begins.</p>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">📊</div>
+          <h3>User Research & Analytics</h3>
+          <p>Detailed user research reports, behavior analysis, and performance metrics to guide design decisions.</p>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">⚡</div>
+          <h3>Conversion Optimization</h3>
+          <p>A/B testing framework, conversion funnel analysis, and optimization strategies for maximum ROI.</p>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🎯</div>
+          <h3>Brand Identity & Guidelines</h3>
+          <p>Complete brand identity system with logo, visual guidelines, and brand application across all touchpoints.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- What's Included -->
-  <section class="service-included section">
+  <!-- 5. CASE STUDY CAROUSEL -->
+  <section class="service-section case-studies-section">
     <div class="container">
-      <h2>What's Included</h2>
-      <div class="included-grid">
-        <div class="included-item">
-          <h3>UX Audit & Strategy</h3>
-          <p>Comprehensive analysis of current user experience with specific recommendations for improvement</p>
-        </div>
-        <div class="included-item">
-          <h3>Interface Design</h3>
-          <p>Performance-optimized designs that prioritize usability and conversion over aesthetics</p>
-        </div>
-        <div class="included-item">
-          <h3>Design System</h3>
-          <p>Scalable component library and style guide for consistent user experience across your product</p>
-        </div>
-        <div class="included-item">
-          <h3>User Testing</h3>
-          <p>Structured testing protocols to validate design decisions and identify areas for optimization</p>
-        </div>
-        <div class="included-item">
-          <h3>Team Training</h3>
-          <p>Design thinking workshops and best practices training for your internal team</p>
-        </div>
-        <div class="included-item">
-          <h3>Implementation Support</h3>
-          <p>Technical guidance and quality assurance during the design implementation process</p>
+      <div class="section-header">
+        <h2>Design Success Stories</h2>
+        <p>Real results from companies that transformed their user experience</p>
+      </div>
+      <div class="case-study-carousel">
+        <div class="case-study-card active">
+          <div class="case-study-header">
+            <h3>E-commerce Platform Redesign</h3>
+            <div class="case-study-metrics">
+              <span class="metric">156% Conversion Increase</span>
+              <span class="timeframe">6 months</span>
+            </div>
+          </div>
+          <div class="case-study-content">
+            <p>Complete UX overhaul of e-commerce platform increased conversion rates by 156% and reduced cart abandonment by 43% through strategic user journey optimization and mobile-first design approach.</p>
+            <div class="case-study-results">
+              <div class="result-item">
+                <div class="result-number">156%</div>
+                <div class="result-label">Conversion Increase</div>
+              </div>
+              <div class="result-item">
+                <div class="result-number">43%</div>
+                <div class="result-label">Less Cart Abandonment</div>
+              </div>
+              <div class="result-item">
+                <div class="result-number">89%</div>
+                <div class="result-label">User Satisfaction</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="service-cta section">
+  <!-- 6. PORTFOLIO GALLERY -->
+  <section id="portfolio" class="service-section calculator-section">
     <div class="container">
-      <div class="cta-content">
-        <h2>Ready to Build Products Users Love?</h2>
-        <p>Get a comprehensive UX audit and custom design roadmap for your product.</p>
-        <div class="cta-buttons">
-          <a href="contact.html#strategy-call" class="btn btn-premium">Book Design Consultation</a>
-          <a href="case-studies.html" class="btn btn-ghost">View Case Studies</a>
+      <div class="section-header">
+        <h2>Design Portfolio</h2>
+        <p>Explore our design work across industries and see how we transform user experiences</p>
+      </div>
+      <div class="calculator-container">
+        <div class="gallery-filters">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="web">Web Design</button>
+          <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+          <button class="filter-btn" data-filter="branding">Branding</button>
+          <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+        </div>
+        
+        <div class="portfolio-gallery">
+          <div class="portfolio-item" data-category="web ecommerce">
+            <div class="portfolio-image">🛒</div>
+            <div class="portfolio-content">
+              <h3 class="portfolio-title">E-commerce Platform</h3>
+              <p class="portfolio-description">Complete redesign of online marketplace with focus on conversion optimization and mobile experience.</p>
+              <div class="portfolio-metrics">
+                <span class="portfolio-metric">+156% Conversions</span>
+                <span class="portfolio-metric">Mobile-First</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="portfolio-item" data-category="mobile">
+            <div class="portfolio-image">📱</div>
+            <div class="portfolio-content">
+              <h3 class="portfolio-title">Fitness App Design</h3>
+              <p class="portfolio-description">User-centered mobile app design for fitness tracking with gamification and social features.</p>
+              <div class="portfolio-metrics">
+                <span class="portfolio-metric">89% User Retention</span>
+                <span class="portfolio-metric">iOS & Android</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="portfolio-item" data-category="web branding">
+            <div class="portfolio-image">🎨</div>
+            <div class="portfolio-content">
+              <h3 class="portfolio-title">SaaS Platform Rebrand</h3>
+              <p class="portfolio-description">Complete brand identity and web design for B2B SaaS platform serving enterprise clients.</p>
+              <div class="portfolio-metrics">
+                <span class="portfolio-metric">Brand Identity</span>
+                <span class="portfolio-metric">Enterprise Focus</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="portfolio-item" data-category="web">
+            <div class="portfolio-image">🏢</div>
+            <div class="portfolio-content">
+              <h3 class="portfolio-title">Corporate Website</h3>
+              <p class="portfolio-description">Professional website design for consulting firm with focus on lead generation and credibility.</p>
+              <div class="portfolio-metrics">
+                <span class="portfolio-metric">Lead Generation</span>
+                <span class="portfolio-metric">Professional</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="portfolio-item" data-category="mobile ecommerce">
+            <div class="portfolio-image">💳</div>
+            <div class="portfolio-content">
+              <h3 class="portfolio-title">Payment App UX</h3>
+              <p class="portfolio-description">Secure and intuitive payment app interface with focus on user trust and transaction efficiency.</p>
+              <div class="portfolio-metrics">
+                <span class="portfolio-metric">Security Focus</span>
+                <span class="portfolio-metric">Fintech</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="portfolio-item" data-category="branding">
+            <div class="portfolio-image">🎯</div>
+            <div class="portfolio-content">
+              <h3 class="portfolio-title">Startup Brand Identity</h3>
+              <p class="portfolio-description">Complete brand identity system for tech startup including logo, guidelines, and marketing materials.</p>
+              <div class="portfolio-metrics">
+                <span class="portfolio-metric">Full Identity</span>
+                <span class="portfolio-metric">Tech Startup</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="calculator-cta">
+        <a href="/contact.html" class="btn-primary">Schedule Design Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FAQ ACCORDION -->
+  <section class="service-section faq-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Design & UX FAQ</h2>
+      </div>
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <div class="faq-question">How long does a complete design project take?</div>
+          <div class="faq-answer">Most design projects take 6-8 weeks from initial research to final delivery. Complex projects with multiple platforms may take 10-12 weeks. We work in phases with regular reviews to ensure alignment throughout the process.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Do you provide ongoing design support after launch?</div>
+          <div class="faq-answer">Yes. We offer 30 days of post-launch optimization included with every project, plus ongoing design retainer options for continuous improvements, A/B testing, and seasonal updates.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How do you measure design success?</div>
+          <div class="faq-answer">We track key metrics including conversion rates, user engagement, bounce rates, task completion rates, and overall business KPIs. Every design decision is validated through data and user feedback.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Can you work with our existing brand guidelines?</div>
+          <div class="faq-answer">Absolutely. We can work within existing brand guidelines or help refine and expand them. We'll ensure all designs maintain brand consistency while optimizing for user experience and business goals.</div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- 8. SCHEDULE CONSULTATION CTA -->
+  <section class="service-section final-cta-section">
+    <div class="container">
+      <div class="final-cta-content">
+        <h2>Ready to Transform Your User Experience?</h2>
+        <p>Get your design audit and custom UX strategy. Schedule a consultation to explore how great design can drive measurable business results for your company.</p>
+        <div class="cta-options">
+          <a href="/contact.html" class="btn-primary">Schedule Design Consultation</a>
+          <a href="/case-studies.html" class="btn-secondary">See More Design Results</a>
+        </div>
+        <div class="trust-signals">
+          <div class="trust-item">✓ 156% Average Conversion Increase</div>
+          <div class="trust-item">✓ Mobile-First Design Approach</div>
+          <div class="trust-item">✓ Complete Design System Included</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-content">
         <div class="footer-brand">
-          <div class="brand">Strategic Success Lab</div>
-          <p>Operator-grade consulting for high-growth teams.</p>
+          <img src="assets/ssl-logo.png" alt="Strategic Success Lab" class="footer-logo">
+          <p>Design that converts.</p>
         </div>
         <div class="footer-links">
           <div class="footer-column">
             <h4>Services</h4>
-            <a href="revenue-architecture.html">Revenue Architecture</a>
-            <a href="strategic-partnerships.html">Strategic Partnerships</a>
-            <a href="ai-implementation.html">AI Implementation</a>
-            <a href="design-ux.html">Design & UX</a>
-            <a href="talent-solutions.html">Talent Solutions</a>
+            <a href="/revenue-architecture.html">Revenue Architecture</a>
+            <a href="/strategic-partnerships.html">Strategic Partnerships</a>
+            <a href="/ai-implementation.html">AI Implementation</a>
+            <a href="/design-ux.html">Design & UX</a>
+            <a href="/talent-solutions.html">Talent Solutions</a>
           </div>
           <div class="footer-column">
             <h4>Company</h4>
-            <a href="about.html">About</a>
-            <a href="case-studies.html">Case Studies</a>
-            <a href="resources.html">Resources</a>
-            <a href="contact.html">Contact</a>
+            <a href="/about.html">About</a>
+            <a href="/case-studies.html">Case Studies</a>
+            <a href="/contact.html">Contact</a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© <span id="year"></span> Strategic Success Lab</span>
+        <span>© <span id="year"></span> Strategic Success Lab. Design that converts.</span>
       </div>
     </div>
   </footer>
-
-  <script src="script.js"></script>
-  <script src="navigation.js"></script>
+  
+  <script src="service-calculator.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Portfolio filter functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterBtns.forEach(b => b.classList.remove('active'));
+        // Add active class to clicked button
+        btn.classList.add('active');
+        
+        const filter = btn.getAttribute('data-filter');
+        
+        portfolioItems.forEach(item => {
+          if (filter === 'all' || item.getAttribute('data-category').includes(filter)) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
