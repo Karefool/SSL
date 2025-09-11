@@ -168,40 +168,87 @@ class HeroAnimations {
     });
   }
 
-  // Interactive Revenue Chart
+  // Interactive Network Diagram - Shows Revenue System Transformation
   initInteractiveChart() {
     const chartContainer = document.querySelector('.revenue-chart');
     if (!chartContainer) return;
 
-    const metrics = [
-      { label: 'Pipeline', value: 25, unit: 'M+', color: '#CDDC39' },
-      { label: 'Win Rate', value: 81, unit: '%', color: '#CDDC39' },
-      { label: 'Partner Growth', value: 4, unit: 'x', color: '#CDDC39' },
-      { label: 'Time Savings', value: 87, unit: '%', color: '#CDDC39' }
-    ];
-
-    chartContainer.innerHTML = metrics.map((metric, index) => `
-      <div class="chart-bar" style="animation-delay: ${index * 0.2}s">
-        <div class="bar-fill" data-value="${metric.value}"></div>
-        <div class="bar-label">${metric.label}</div>
-        <div class="bar-value">${metric.value}${metric.unit}</div>
+    // Create network diagram showing interconnected revenue systems
+    chartContainer.innerHTML = `
+      <div class="network-diagram">
+        <svg class="network-svg" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+          <!-- Connection lines -->
+          <line class="connection-line" x1="80" y1="100" x2="160" y2="60" stroke="rgba(205, 220, 57, 0.6)" stroke-width="2"/>
+          <line class="connection-line" x1="80" y1="100" x2="160" y2="140" stroke="rgba(205, 220, 57, 0.6)" stroke-width="2"/>
+          <line class="connection-line" x1="160" y1="60" x2="240" y2="80" stroke="rgba(205, 220, 57, 0.6)" stroke-width="2"/>
+          <line class="connection-line" x1="160" y1="140" x2="240" y2="120" stroke="rgba(205, 220, 57, 0.6)" stroke-width="2"/>
+          <line class="connection-line" x1="240" y1="80" x2="320" y2="100" stroke="rgba(205, 220, 57, 0.6)" stroke-width="2"/>
+          <line class="connection-line" x1="240" y1="120" x2="320" y2="100" stroke="rgba(205, 220, 57, 0.6)" stroke-width="2"/>
+          
+          <!-- Network nodes -->
+          <circle class="network-node node-1" cx="80" cy="100" r="25" fill="rgba(205, 220, 57, 0.2)" stroke="#CDDC39" stroke-width="2"/>
+          <circle class="network-node node-2" cx="160" cy="60" r="20" fill="rgba(205, 220, 57, 0.2)" stroke="#CDDC39" stroke-width="2"/>
+          <circle class="network-node node-3" cx="160" cy="140" r="20" fill="rgba(205, 220, 57, 0.2)" stroke="#CDDC39" stroke-width="2"/>
+          <circle class="network-node node-4" cx="240" cy="80" r="18" fill="rgba(205, 220, 57, 0.2)" stroke="#CDDC39" stroke-width="2"/>
+          <circle class="network-node node-5" cx="240" cy="120" r="18" fill="rgba(205, 220, 57, 0.2)" stroke="#CDDC39" stroke-width="2"/>
+          <circle class="network-node node-6" cx="320" cy="100" r="22" fill="rgba(205, 220, 57, 0.2)" stroke="#CDDC39" stroke-width="2"/>
+          
+          <!-- Node labels -->
+          <text x="80" y="106" text-anchor="middle" fill="white" font-size="10" font-weight="600">LEAD</text>
+          <text x="160" y="65" text-anchor="middle" fill="white" font-size="9" font-weight="600">QUALIFY</text>
+          <text x="160" y="145" text-anchor="middle" fill="white" font-size="9" font-weight="600">NURTURE</text>
+          <text x="240" y="85" text-anchor="middle" fill="white" font-size="8" font-weight="600">DEMO</text>
+          <text x="240" y="125" text-anchor="middle" fill="white" font-size="8" font-weight="600">PARTNER</text>
+          <text x="320" y="106" text-anchor="middle" fill="white" font-size="9" font-weight="600">CLOSE</text>
+          
+          <!-- Data flow particles -->
+          <circle class="data-particle particle-1" cx="80" cy="100" r="2" fill="#00D4AA"/>
+          <circle class="data-particle particle-2" cx="80" cy="100" r="2" fill="#00D4AA"/>
+          <circle class="data-particle particle-3" cx="80" cy="100" r="2" fill="#00D4AA"/>
+        </svg>
+        
+        <div class="network-labels">
+          <div class="network-label left">Chaotic Process</div>
+          <div class="network-label right">Optimized System</div>
+        </div>
       </div>
-    `).join('');
+    `;
 
-    // Animate bars on scroll
-    const chartObserver = new IntersectionObserver((entries) => {
+    // Animate network on scroll
+    const networkObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const bars = entry.target.querySelectorAll('.bar-fill');
-          bars.forEach(bar => {
-            const value = bar.dataset.value;
-            bar.style.height = `${Math.min(value, 100)}%`;
+          const nodes = entry.target.querySelectorAll('.network-node');
+          const lines = entry.target.querySelectorAll('.connection-line');
+          const particles = entry.target.querySelectorAll('.data-particle');
+          
+          // Animate nodes appearing
+          nodes.forEach((node, index) => {
+            setTimeout(() => {
+              node.style.opacity = '1';
+              node.style.transform = 'scale(1)';
+            }, index * 200);
+          });
+          
+          // Animate connection lines
+          lines.forEach((line, index) => {
+            setTimeout(() => {
+              line.style.strokeDasharray = 'none';
+              line.style.opacity = '1';
+            }, 600 + index * 100);
+          });
+          
+          // Animate data particles
+          particles.forEach((particle, index) => {
+            setTimeout(() => {
+              particle.style.animationPlayState = 'running';
+            }, 1200 + index * 300);
           });
         }
       });
     });
 
-    chartObserver.observe(chartContainer);
+    networkObserver.observe(chartContainer);
   }
 }
 
