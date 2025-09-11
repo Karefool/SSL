@@ -79,9 +79,9 @@ function handleSectionFadeIn() {
   sections.forEach(section => observer.observe(section));
 }
 
-// Counter Animations
+// Counter Animations - disabled for proof-number to make static
 function handleCounterAnimations() {
-  const counters = document.querySelectorAll('.proof-number, .stat-counter, .impact-metric');
+  const counters = document.querySelectorAll('.stat-counter, .impact-metric');
   
   const animateCounter = (element) => {
     const target = parseInt(element.dataset.target) || parseInt(element.textContent.replace(/[^\d]/g, ''));

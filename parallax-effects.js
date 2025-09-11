@@ -16,7 +16,7 @@ class ParallaxController {
     // Define parallax elements with different speeds
     const parallaxConfigs = [
       { selector: '.service-card', speed: 0.1, direction: 'up' },
-      { selector: '.proof-stat', speed: 0.15, direction: 'up' },
+      // Removed .proof-stat parallax to make social proof numbers static
       { selector: '.hero-content', speed: 0.05, direction: 'down' },
       { selector: '#hero-canvas', speed: 0.02, direction: 'down' }
     ];
