@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="theme-premium.css">
   <link rel="stylesheet" href="navigation.css">
+  <link rel="stylesheet" href="visual-impact.css">
   <meta property="og:title" content="Strategic Success Lab">
   <meta property="og:description" content="Operator-grade consulting for revenue systems, pipeline partnerships, and practical AI.">
   <meta property="og:type" content="website">
@@ -60,70 +61,61 @@
     </div>
   </nav>
 
-  <!-- Streamlined Hero Section -->
+  <!-- DRAMATIC FULL-VIEWPORT HERO -->
   <section class="hero-homepage">
-    <div class="container">
-      <div class="hero-content">
-        <h1>Revenue Architecture for High-Growth Tech</h1>
-        <p class="hero-subtitle">I build scalable revenue engines and strategic partnerships that deliver measurable growth. No fluff, just results.</p>
-        <div class="hero-stats">
-          <div class="stat">
-            <div class="stat-number">$25M+</div>
-            <div class="stat-label">Pipeline Generated</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number">81%</div>
-            <div class="stat-label">Win Rate Improvement</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number">45 Days</div>
-            <div class="stat-label">Avg. Sales Cycle</div>
-          </div>
-        </div>
-        <div class="hero-cta">
-          <a href="contact.html#strategy-call" class="btn btn-premium">Get Your Revenue Audit</a>
-          <a href="case-studies.html" class="btn btn-ghost">View Case Studies</a>
-        </div>
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-content">
+      <h1 class="hero-title">Revenue Architecture for High-Growth Tech</h1>
+      <p class="hero-subtitle">I build scalable revenue engines and strategic partnerships that deliver measurable growth. No fluff, just results.</p>
+      
+      <!-- Interactive Revenue Chart -->
+      <div class="revenue-chart">
+        <!-- Populated by JavaScript -->
+      </div>
+      
+      <div class="hero-cta">
+        <a href="contact.html#strategy-call" class="cta-primary">Book Strategy Call</a>
+        <a href="#services-preview" class="cta-secondary">See Our Work</a>
       </div>
     </div>
   </section>
 
   <!-- Services Overview -->
-  <section class="services-preview section">
+  <section id="services-preview" class="services-preview section">
     <div class="container">
       <h2>Core Services</h2>
       <p class="section-subtitle">Operator-grade solutions for revenue, partnerships, and growth acceleration.</p>
       
       <div class="services-grid">
-        <div class="service-card">
+        <div class="service-card glass-card">
           <div class="service-icon">⚡</div>
           <h3>Revenue Architecture</h3>
           <p>Build scalable revenue systems that convert at 81%+ win rates.</p>
           <a href="revenue-architecture.html" class="service-link">Learn More →</a>
         </div>
         
-        <div class="service-card">
+        <div class="service-card glass-card">
           <div class="service-icon">🤝</div>
           <h3>Strategic Partnerships</h3>
           <p>5 qualified partner conversations in 30 days or you don't pay.</p>
           <a href="strategic-partnerships.html" class="service-link">Learn More →</a>
         </div>
         
-        <div class="service-card">
+        <div class="service-card glass-card">
           <div class="service-icon">🧠</div>
           <h3>AI Implementation</h3>
           <p>AI that amplifies judgment, not replaces it. Working systems, not PowerPoints.</p>
           <a href="ai-implementation.html" class="service-link">Learn More →</a>
         </div>
         
-        <div class="service-card">
+        <div class="service-card glass-card">
           <div class="service-icon">🎨</div>
           <h3>Design & UX</h3>
           <p>Products users adopt, teams that perform, systems that scale.</p>
           <a href="design-ux.html" class="service-link">Learn More →</a>
         </div>
         
-        <div class="service-card">
+        <div class="service-card glass-card">
           <div class="service-icon">👥</div>
           <h3>Talent Solutions</h3>
           <p>Build high-performing teams with proven hiring and enablement systems.</p>
@@ -209,5 +201,7 @@
 
   <script src="script.js"></script>
   <script src="navigation.js"></script>
+  <script src="hero-animations.js"></script>
+  <script src="parallax-effects.js"></script>
 </body>
 </html>
