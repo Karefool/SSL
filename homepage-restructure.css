@@ -714,10 +714,7 @@ textarea:focus {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
-.problem-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
+/* Removed emoji icons for professional appearance */
 
 .problem-card h3 {
   color: var(--primary-dark);
