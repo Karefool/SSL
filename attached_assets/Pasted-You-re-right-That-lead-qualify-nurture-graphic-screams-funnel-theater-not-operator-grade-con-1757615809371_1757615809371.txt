@@ -1,0 +1,126 @@
+You’re right. That “lead → qualify → nurture” graphic screams funnel theater, not operator‑grade consulting. Kill it. Replace it with one of these three hero‑adjacent patterns that fit your current layout and CSS, feel modern, and actually say “we do serious work.”
+
+Your code already has the pieces we need: a `.hero` section, card/grid utilities, and a ready‑made stats grid. We’ll just swap the content under the header and reuse your existing classes. &#x20;
+
+---
+
+## Option 1: Results Ribbon (proof first)
+
+**What it is:** A tight 2x2 stat band under the hero showing outcomes. No diagrams, no funnels, just numbers people care about.
+
+**Why it works:** Decision‑makers scan for proof. You already ship `.stats-grid` and `.stat-card`, so this drops in with zero new CSS.&#x20;
+
+**Markup sketch** (immediately under the hero):
+
+```html
+<section class="section container">
+  <div class="stats-grid">
+    <div class="stat-card"><h3>+38%</h3><p>Qualified pipeline</p></div>
+    <div class="stat-card"><h3>+12%</h3><p>Win rate in 90 days</p></div>
+    <div class="stat-card"><h3>−25%</h3><p>Time to hire</p></div>
+    <div class="stat-card"><h3>+3</h3><p>New partner channels</p></div>
+  </div>
+</section>
+```
+
+Those classes exist in your `styles.css`, so it will pick up your spacing, borders, and accent color.&#x20;
+
+---
+
+## Option 2: Creds Strip (mini case‑study cards or logo row)
+
+**What it is:** A single row of three compact cards or logos that link to case studies. Clean, scannable, real.
+
+**Why it works:** Social proof without shouting. You already have `.cards` and `.card`.&#x20;
+
+**Markup sketch**:
+
+```html
+<section class="section container">
+  <div class="cards">
+    <a class="card" href="/case-studies/devtools-gtm">
+      <span class="tiny">Win rate +12%</span>
+      <h3>Developer tools GTM reset</h3>
+      <p>ICP, partner motions, enablement.</p>
+    </a>
+    <a class="card" href="/case-studies/healthcare-pilot">
+      <span class="tiny">Time‑to‑hire −25%</span>
+      <h3>Healthcare pilot engine</h3>
+      <p>Role simulations for selection.</p>
+    </a>
+    <a class="card" href="/case-studies/supply-chain">
+      <span class="tiny">Faster time‑to‑value</span>
+      <h3>Supply chain expansion</h3>
+      <p>Program design and launch.</p>
+    </a>
+  </div>
+</section>
+```
+
+Swap for logos if you prefer. Same grid, fewer words.
+
+---
+
+## Option 3: Subtle Blueprint Accent (background, not a graphic)
+
+**What it is:** A soft tech grid with a cool blue “beam” behind the hero. No stock art, no PNGs.
+
+**Why it works:** Feels cutting edge and professional without stealing attention from your headline and CTA. It’s CSS only and plays nice with your current hero markup. Your hero is `<section class="hero container">`; add `bg-hero` to that section and paste the CSS below.&#x20;
+
+**Light CSS guide** (adjust values freely):
+
+```css
+/* Make hero layered */
+.hero { position: relative; overflow: hidden; }
+
+/* Background accent for hero */
+.bg-hero {
+  background:
+    radial-gradient(1000px 480px at 110% 10%, rgba(0,82,255,.10) 0%, rgba(0,82,255,0) 60%),
+    radial-gradient(800px 420px at -10% 0%, rgba(26,95,255,.10) 0%, rgba(26,95,255,0) 55%),
+    linear-gradient(180deg, rgba(241,245,255,.6) 0%, rgba(246,248,252,0) 60%);
+}
+
+/* Soft grid overlay */
+.hero::after {
+  content: "";
+  position: absolute; inset: -2px;
+  background-image:
+    linear-gradient(rgba(15,23,42,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15,23,42,.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+```
+
+**HTML nudge**:
+
+```html
+<section class="hero container bg-hero">
+  <!-- existing h1, sub, CTA -->
+</section>
+```
+
+This keeps your current typography, spacing, and accent blue `#0052FF`. No dependency drama.&#x20;
+
+---
+
+## Copy to replace the funnel words
+
+Use outcome‑oriented microcopy beneath the headline, not process labels:
+
+* “Architect systems that convert. Align partners that add pipeline. Automate the parts that waste time.”
+* Or pair the Results Ribbon with a one‑liner: “Measured outcomes, not theater.”
+
+---
+
+## Quick steps in Replit
+
+1. Delete the funnel graphic block under the hero in your `index.html`. Your hero is already defined and easy to target.&#x20;
+2. Pick **one** option above.
+3. Paste the small HTML sketch into a new `<section class="section container">` below the hero. Your CSS already styles `.section` spacing.&#x20;
+4. If you chose Option 3, add `bg-hero` to the hero tag and drop the CSS snippet into `styles.css`.&#x20;
+5. Sanity check on mobile. Your grids already collapse to a single column at 800px.&#x20;
+
+Pick one, ship it, and your header area stops looking like a marketing textbook from a decade ago and starts looking like a real consultancy that builds outcomes.
