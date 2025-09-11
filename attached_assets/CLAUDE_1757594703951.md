@@ -1,0 +1,61 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Project Overview
+
+Strategic Success Lab (SSL) is a static website for a consulting business focused on revenue architecture, partnerships, and practical AI. The site is built with vanilla HTML, CSS, and JavaScript - no build process or dependencies required.
+
+## Architecture
+
+**Static Website Structure:**
+- `index.html` - Main landing page with hero, services sections, portfolio, and contact
+- `styles.css` - CSS styling using Inter font from Google Fonts
+- `script.js` - JavaScript that dynamically loads portfolio items from JSON
+- `portfolio.json` - Data file containing project/case study information
+- `assets/` - Images (favicon.png, og.png, portrait.jpg)
+- `CNAME` - Custom domain configuration for GitHub Pages
+
+**Key Design Patterns:**
+- Dynamic content loading via `fetch()` API to read portfolio.json
+- Responsive design with container-based layout
+- Semantic HTML structure with proper meta tags and OpenGraph
+- JSON-LD structured data for SEO
+
+## Development Workflow
+
+**Local Development:**
+- No build process required - open index.html directly in browser
+- For full functionality (portfolio loading), serve from local web server: `python -m http.server 8000`
+- Edit content in portfolio.json for dynamic sections
+- Modify index.html for static content updates
+
+**Deployment Options:**
+1. **GitHub Pages** (primary): Push to main branch, enable Pages in repo settings, add CNAME for custom domain
+2. **Netlify**: Import repository, automatic deployment of static files
+
+## Content Management
+
+**Portfolio Items:** Edit portfolio.json array to add/modify project case studies
+**Static Content:** Update text directly in index.html within the designated sections:
+- Hero section (.hero)
+- Approach section (#approach)  
+- Proof section (#proof)
+- Contact section (#contact)
+**Assets:** Replace favicon.png (64x64), og.png (1200x630), and portrait.jpg as needed
+
+## Domain Configuration
+
+**Custom Domain Setup:**
+- CNAME file contains domain: strategicsuccesslab.com
+- DNS: CNAME for www → username.github.io
+- Root domain: ALIAS/ANAME or A record per GitHub Pages docs
+- Alternative: rj.works domain forwarding
+
+## Technical Considerations
+
+- Pure static site - no server-side processing
+- Graceful fallback if portfolio.json fails to load
+- Mobile-first responsive design
+- SEO optimized with proper meta tags and structured data
+- Performance focused with minimal dependencies (only Google Fonts)
