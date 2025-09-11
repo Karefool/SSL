@@ -756,6 +756,49 @@ textarea:focus {
   color: var(--brand-700);
 }
 
+/* Professional Service Card Redesign */
+.service-card {
+  background: white !important;
+  border: 2px solid var(--gray-2) !important;
+  padding: 2rem !important;
+  border-radius: 16px !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  text-align: left !important;
+}
+
+.service-card:hover {
+  border-color: var(--accent) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 20px 40px rgba(11, 95, 255, 0.15) !important;
+}
+
+.service-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--accent);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: white;
+  font-size: 0; /* Hide emoji fallback */
+}
+
+.service-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke-width: 2.5;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
 .services-cta-section,
 .case-studies-cta-section {
   background: var(--brand-50);
