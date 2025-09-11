@@ -848,3 +848,53 @@ img {
     transition-duration: 0.2s !important;
   }
 }
+/* Logo Styling */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 32px;
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .logo-img {
+    height: 28px;
+  }
+}
+
+@media (min-width: 769px) {
+  .brand-logo:hover .logo-img {
+    transform: scale(1.05);
+  }
+}
+
+/* Dark background support */
+.hero-homepage,
+.page-hero,
+.contact-hero {
+  .logo-img {
+    filter: brightness(1.1);
+  }
+}
+/* Footer Logo Styling */
+.footer-logo {
+  height: 40px;
+  width: auto;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.footer-logo:hover {
+  opacity: 1;
+}
+
+/* Favicon update */
+link[rel="icon"] {
+  href: "assets/ssl-logo.png";
+}
