@@ -117,8 +117,8 @@
         </div>
       </div>
       <div class="hero-cta">
-        <a href="#frameworks" class="btn-primary">Browse Frameworks</a>
-        <a href="#insights" class="btn-secondary">Read Insights</a>
+        <a href="#frameworks" class="btn">Browse Frameworks</a>
+        <a href="#insights" class="btn ghost">Read Insights</a>
       </div>
     </div>
   </section>
@@ -405,7 +405,7 @@
         <p>Join 2,500+ strategic leaders who get early access to our newest frameworks, templates, and insights.</p>
         <div class="newsletter-signup">
           <input type="email" placeholder="Enter your email address" class="email-input">
-          <button class="btn-primary">Get Strategic Updates</button>
+          <button class="btn" id="resource-newsletter-btn">Get Strategic Updates</button>
         </div>
         <div class="signup-benefits">
           <div class="benefit-item">✓ Early access to new frameworks</div>
@@ -427,7 +427,7 @@
         <form action="mailto:hello@strategicsuccesslab.com?subject=Newsletter%20Signup" method="post" enctype="text/plain" class="newsletter-form">
           <div class="newsletter-input-group">
             <input type="email" name="email" placeholder="Enter your business email" required class="newsletter-input">
-            <button type="submit" class="btn-primary newsletter-btn">Subscribe to Insights</button>
+            <button type="submit" class="btn newsletter-btn">Subscribe to Insights</button>
           </div>
           <p class="newsletter-disclaimer">Join 2,500+ strategic leaders. No spam, unsubscribe anytime.</p>
         </form>
@@ -486,7 +486,7 @@
     });
     
     // Newsletter signup
-    document.querySelector('.btn-primary').addEventListener('click', function() {
+    document.querySelector('#resource-newsletter-btn').addEventListener('click', function() {
       const emailInput = document.querySelector('.email-input');
       const email = emailInput.value;
       
