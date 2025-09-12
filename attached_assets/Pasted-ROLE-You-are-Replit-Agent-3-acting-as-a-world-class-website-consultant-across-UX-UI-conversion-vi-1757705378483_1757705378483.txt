@@ -1,0 +1,130 @@
+ROLE
+You are Replit Agent 3 acting as a world-class website consultant across UX/UI, conversion, visual design, technical SEO, accessibility, and performance. You will evaluate every page and propose minimal, safe patches as unified diffs.
+
+INPUTS
+• Live site for visual baseline: https://f6f2af48-2323-4adb-b199-5a0664a0f0f4-00-1mczk87q0250w.worf.replit.dev/
+• Codebase: analyze all files in this workspace (**/*.html, **/*.css, **/*.js).
+
+NORTH STAR
+Match the homepage’s “futuristic, professional, restrained” look on all pages. Non-home pages currently show: emoji/symbol clutter in headings, duplicated process blocks, inconsistent hero spacing, uneven stats layouts, and thin case study layouts. Unify everything.
+
+HARD RULES
+1) Reuse existing system first (no new framework): classes like .site-header, .hero, .section .container, .grid-2, .cards .card, .stats-grid .stat-card, .btn. If a util is missing, create the smallest possible one.
+2) Exactly one H1 per page (in the hero). Headings descend properly H2→H3.
+3) Remove emojis/symbols from headings and UI chrome; replace them with Lucide style SVG icons.
+4) Standardize CTAs: primary “Get Your Strategy Session” or page-specific “Book Strategy Call,” secondary “See How It Works / View Case Studies.”
+5) Keep proofs concise: 2×2 or 3×2 stats using .stats-grid. No metric walls.
+6) Minimal diffs only. Do not dump full files.
+
+DELIVERABLES
+A) Executive Summary (5 lines)
+B) Site Inventory & Status
+   - Table: path | page type | completeness (complete/partial/missing) | key visual issues | CTA present? (Y/N)
+C) Design Consistency Audit (non-home vs home)
+   - Hero pattern: spacing, proof band, CTA hierarchy
+   - Section shells: .section .container usage and alternation bands
+   - Components: .cards .card, .grid-2, .stats-grid, .btn
+   - Copy chrome: headings without emojis/symbols; consistent microcopy
+D) Master Visual System (codify the homepage look)
+   - Extract tokens (colors, spacing, radii, shadows) if not in :root; add CSS variables and tiny utils:
+     • .section--alt (subtle band)
+     • .eyebrow (uppercase kicker)
+     • .panel (glass card with backdrop-filter fallback)
+     • .beam (subtle blue gradient/grid background for hero/feature sections)
+     • focus-visible ring for a11y
+   - Return a single unified diff for styles.css with these minimal utilities and any token vars you need.
+E) Page-by-Page Remediation Plan + Diffs
+   For each non-home page, provide:
+   1) Findings: 3–6 bullets tied to selectors/elements
+   2) The fix: minimal structural adjustments reusing existing classes
+   3) Code: unified diffs per file (HTML/CSS)
+   4) Acceptance criteria: how we verify the page now matches the system
+
+SCOPE-BY-PAGE (apply this template; include diffs)
+1) /revenue-architecture.html
+   - Make hero match home: H1 + sub + single primary CTA + optional 2×2 stats band under CTA
+   - Collapse repeated process visuals into one clean “01–03” row using .grid-2 or .cards (no icons on headings)
+   - Ensure proof/cards use .cards .card; normalize button styles to .btn / .btn ghost
+
+2) /strategic-partnerships.html
+   - Remove stray symbols and emojis from headings
+   - Standardize the 3-phase process to the same visual as Revenue Architecture
+   - Add a compact stat band near top; align CTAs to standard labels
+
+3) /ai-implementation.html
+   - Align hero treatment; replace scattered icons with section eyebrows
+   - Render outcomes in a .stats-grid instead of repeated inline numbers
+   - Ensure FAQ uses semantic headings and spacing from the system
+
+4) /design-ux.html
+   - Strip ✨ and ⚡ from top chrome; keep copy clean
+   - Present “Design Process” as a single visual row; portfolio items as .cards with hover polish
+   - Add .panel around any media blocks if present
+
+5) /talent-solutions.html
+   - Fix hero spacing and ensure one H1
+   - Move metrics into .stats-grid; unify 3-phase process visual
+   - Add calculator panel as .panel and stabilize layout
+
+6) /case-studies.html (+ detail pages if present)
+   - Index: 3–6 case cards using .cards .card, each with outcome chip and “View full case study”
+   - If detail pages exist: hero with H1 + one-liner; sections: Context, Intervention, Outcomes (use .stats-grid)
+
+7) /pricing.html
+   - Ensure consistent hero pattern and CTA pair
+   - Render tiers as .cards with concise features; demote comparison wall to “See Full Comparison” link
+
+8) /why-ssl.html
+   - Convert long comparison table to .cards or a responsive table with consistent styling
+   - Keep the 4-stage framework in one visual row; add proof band near top
+
+9) /about.html
+   - Use .about-grid for portrait+copy; add subtle portrait ring if util exists
+   - Keep track record as a .stats-grid; standardize CTAs
+
+10) /contact.html
+   - Wrap scheduler/form area in .panel; ensure labels/inputs accessible; add fallback text
+   - One primary CTA, no duplication
+
+CODE REQUIREMENTS
+• Return unified diffs. Example format:
+  --- a/styles.css
+  +++ b/styles.css
+  @@
+  - old
+  + new
+
+• Add these minimal utilities to styles.css if missing (tune tokens to current palette):
+  :root { --shadow-1: 0 2px 10px rgba(2,6,23,.06); --shadow-2: 0 6px 24px rgba(2,6,23,.08); --ring: 0 0 0 2px rgba(0,82,255,.15); }
+  .section--alt { background:#F6F8FC; }
+  .eyebrow { font: 12px/1.4 Inter, system-ui; letter-spacing:.08em; text-transform:uppercase; color:#94A3B8; margin-bottom:8px; }
+  .panel { background: rgba(255,255,255,.66); border:1px solid rgba(234,236,239,.75); border-radius:16px; box-shadow:var(--shadow-1); }
+  @supports (backdrop-filter: blur(8px)) { .panel { backdrop-filter:saturate(160%) blur(10px); } }
+  .beam { position:relative; overflow:hidden; background:
+    radial-gradient(900px 420px at -10% 0%, rgba(0,82,255,.10) 0, rgba(0,82,255,0) 55%),
+    radial-gradient(1000px 500px at 110% 10%, rgba(26,95,255,.10) 0, rgba(26,95,255,0) 60%); }
+  .beam::after { content:""; position:absolute; inset:-2px; pointer-events:none; background-image:
+    linear-gradient(rgba(15,23,42,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15,23,42,.06) 1px, transparent 1px); background-size:24px 24px; mix-blend-mode:overlay; }
+  a:focus-visible, .btn:focus-visible, .card:focus-visible { outline:none; box-shadow:var(--ring); border-radius:12px; }
+
+A11Y & PERFORMANCE CHECKS (apply across pages)
+• One H1 in hero; landmarks and heading order valid
+• Focus-visible ring on links/buttons; contrast pass for text vs backgrounds
+• Add width/height to <img> and loading="lazy" for non-hero images
+• Stabilize hero/container heights to reduce CLS
+
+ANALYTICS HOOKS (optional)
+• Add data-event to primary CTAs; tiny inline click logger for now
+
+OUTPUT FORMAT
+1) Executive summary (5 lines)
+2) Inventory table
+3) Master Visual System diff for styles.css
+4) Page-by-page: findings → diffs → acceptance criteria (repeat per page)
+5) Final QA checklist (content, design, a11y, SEO, performance)
+
+QUALITY BAR
+Every claim must reference a selector or element and file path. Every fix must be a minimal diff that reuses the existing system. Do not invent components when .grid-2, .cards .card, .stats-grid, and .btn exist.
+
+
