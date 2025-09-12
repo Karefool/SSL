@@ -5,11 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Talent Solutions - Strategic Success Lab</title>
   <meta name="description" content="Build high-performing teams with strategic hiring and talent optimization. Calculate your cost of bad hires and get custom talent strategy.">
+  <meta property="og:title" content="Talent Solutions - Strategic Success Lab">
+  <meta property="og:description" content="Build high-performing teams with strategic hiring and talent optimization. Calculate your cost of bad hires and get custom talent strategy.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://strategicsuccesslab.com/talent-solutions.html">
   <link rel="icon" href="assets/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="design-system.css">
   <link rel="stylesheet" href="service-pages.css">
+  
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://strategicsuccesslab.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://strategicsuccesslab.com/services.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Talent Solutions",
+        "item": "https://strategicsuccesslab.com/talent-solutions.html"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- Navigation -->
@@ -274,7 +308,7 @@
         </div>
       </div>
       <div class="calculator-cta">
-        <a href="contact.html" class="btn-primary">Schedule Talent Strategy Call</a>
+        <a href="contact.html" class="btn-primary" data-event="talent_strategy_call_schedule">Schedule Talent Strategy Call</a>
       </div>
     </div>
   </section>
@@ -313,7 +347,7 @@
         <h2>Ready to Build Your High-Performance Team?</h2>
         <p>Get your talent audit and custom hiring strategy. Schedule a strategy call to explore how optimized talent systems can accelerate your team's success.</p>
         <div class="cta-options">
-          <a href="contact.html" class="btn-primary">Schedule Talent Strategy Call</a>
+          <a href="contact.html" class="btn-primary" data-event="talent_strategy_call_schedule">Schedule Talent Strategy Call</a>
           <a href="case-studies.html" class="btn-secondary">See Team Success Stories</a>
         </div>
         <div class="trust-signals">
@@ -361,5 +395,6 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <script src="analytics.js" defer></script>
 </body>
 </html>

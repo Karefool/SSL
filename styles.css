@@ -96,7 +96,7 @@ nav a {
 }
 nav a:hover { color: var(--accent); }
 nav a:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 3px solid var(--accent);
   outline-offset: 2px;
 }
 nav a[aria-current="page"] {
@@ -137,6 +137,7 @@ h1 {
 .btn {
   display: inline-block;
   padding: var(--space-3) var(--space-6);
+  min-height: 44px;
   border-radius: var(--radius-2);
   border: 1px solid var(--accent);
   background: var(--accent);
@@ -162,7 +163,7 @@ h1 {
 
 /* Enhanced Focus States */
 .btn:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 3px solid var(--accent);
   outline-offset: 2px;
   box-shadow: var(--shadow-premium), 0 0 0 4px rgba(0, 82, 255, 0.1);
 }
@@ -170,13 +171,13 @@ h1 {
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 3px solid var(--accent);
   outline-offset: 1px;
   border-color: var(--accent);
 }
 
 a:focus-visible:not(.btn):not(.nav-link) {
-  outline: 2px solid var(--accent);
+  outline: 3px solid var(--accent);
   outline-offset: 2px;
 }
 
