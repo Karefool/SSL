@@ -1,0 +1,61 @@
+Based on my analysis of the Strategic Success Lab website, here's my diagnostic:
+5-Line "Who/What/Why/For" Summary
+
+WHO: Strategic Success Lab - growth infrastructure consultancy
+WHAT: Revenue systems, partnerships, automation, product design, and talent solutions
+WHY: Break through revenue plateaus without enterprise complexity or six-figure retainers
+FOR: Ambitious companies with 10-100 person teams facing growth bottlenecks
+HOW: Operator-grade solutions with measurable results in weeks, not quarters
+
+Section Order Recommendation
+Current Order Issues: The methodology section repeats content ("We start with what's actually happening" appears twice).
+Recommended Order:
+
+Hero (problem/solution)
+Services (what you get)
+Results/Case Studies (proof)
+Methodology (how it works)
+CTA (next step)
+
+Rationale: Lead with the problem and solution, immediately show what services solve it, prove it works with results, then explain the process. This follows the natural buyer journey from problem awareness to decision.
+Copy Trims
+Headlines (<10 words):
+
+"Revenue Systems Without Enterprise Complexity"
+"Break Your Revenue Plateau Fast"
+"Growth Infrastructure That Actually Works"
+
+Subheads (<20 words):
+
+"From chaotic pipeline to predictable revenue in 90 days—built for teams of 10-100"
+"Operator-grade solutions that deliver measurable results in weeks, not quarters"
+"No six-figure retainers. Just systems that scale with your actual team size"
+
+CTAs (<6 words):
+
+"See How We Work"
+"Get Your Growth Audit"
+"Start Breaking Through"
+
+5-Second Clarity Acceptance Criteria
+✓ Company name and category clear within first glance
+✓ Target audience identified (team size 10-100)
+✓ Core value prop understood (growth systems without enterprise costs)
+✓ Differentiator apparent (no six-figure retainers, weeks not quarters)
+✗ Single focused headline (current hero is too dense)
+Evidence Cited
+Hero Elements Analyzed:
+
+Opening statement: "Strategic Success Lab architects the growth infrastructure ambitious companies need to break through revenue plateaus"
+Differentiator: "No six-figure retainers or year-long contracts—just systems that work"
+Tagline: "Operator-grade solutions for revenue, partnerships, and growth acceleration"
+
+Navigation/Service Elements:
+
+Revenue: "From chaotic pipeline to predictable revenue. Built for teams of 10-100"
+Partnerships: "Channel partnerships without enterprise complexity"
+Automation: "Practical automation for lean teams. AI solutions that pay for themselves in 30 days"
+Design: "Product design for real users and real budgets"
+Talent: "Role simulations that predict performance"
+
+Key Issue: The hero tries to say everything at once. Simplifying to one powerful statement with supporting proof points would increase 5-second comprehension significantly.
