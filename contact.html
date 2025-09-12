@@ -3,14 +3,44 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact — Strategic Success Lab</title>
-  <meta name="description" content="Ready to build scalable revenue systems? Multiple ways to get started with Strategic Success Lab.">
+  <title>Contact Strategic Success Lab — Book Your Free Revenue Strategy Call</title>
+  <meta name="description" content="Book your free strategic consultation. Revenue audit starting at $497, partnership program with guaranteed results, and strategic implementation services $15K-$75K."">
+  <meta property="og:title" content="Contact Strategic Success Lab — Book Your Free Revenue Strategy Call">
+  <meta property="og:description" content="Book your free strategic consultation. Revenue audit starting at $497, partnership program with guaranteed results.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="theme-premium.css">
   <link rel="stylesheet" href="mobile-excellence.css">
   <link rel="stylesheet" href="navigation.css">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Strategic Success Lab",
+    "url": "https://strategicsuccesslab.com",
+    "telephone": "+1-833-762-7384",
+    "email": "hello@strategicsuccesslab.com",
+    "areaServed": "United States",
+    "serviceType": [
+      "Revenue Architecture Consulting",
+      "Strategic Partnership Development", 
+      "AI Implementation",
+      "Business Strategy Consulting"
+    ],
+    "priceRange": "$497-$75000",
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+    "openingHours": "Mo-Fr 09:00-17:00",
+    "description": "Strategic consulting for revenue systems, partnerships, and practical AI implementation"
+  }
+  </script>
 </head>
 <body>
   <!-- Navigation -->
@@ -44,7 +74,7 @@
           <a href="why-ssl.html" class="nav-link">Why SSL</a>
           <a href="about.html" class="nav-link">About</a>
           <a href="resources-enhanced.html" class="nav-link">Resources</a>
-          <a href="contact.html" class="nav-link active">Contact</a>
+          <a href="contact.html" class="nav-link" aria-current="page">Contact</a>
         </div>
         
         <a href="contact.html#strategy-call" class="nav-cta">Get Your Revenue Audit</a>
@@ -290,5 +320,8 @@
   <script src="script.js"></script>
   <script src="navigation.js"></script>
   <script src="mobile-excellence.js" defer></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

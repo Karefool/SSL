@@ -3,30 +3,96 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Revenue Architecture - Strategic Success Lab</title>
-  <meta name="description" content="Build scalable revenue systems that convert. Get your custom revenue assessment and pipeline calculator.">
+  <title>Revenue Architecture Consulting — Build Scalable Revenue Systems That Convert at 81%+ Win Rates</title>
+  <meta name="description" content="Revenue architecture consulting: Build scalable revenue systems with 81%+ win rates. $25M+ pipeline generated. Custom revenue assessment and 90-day implementation.">
+  <meta property="og:title" content="Revenue Architecture Consulting — Build Scalable Revenue Systems">
+  <meta property="og:description" content="Revenue architecture consulting: Build scalable revenue systems with 81%+ win rates. $25M+ pipeline generated.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="design-system.css">
   <link rel="stylesheet" href="service-pages.css">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does implementation take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most revenue architecture projects take 60-90 days for full implementation, with initial improvements visible within the first 30 days. We work in phases so you see results quickly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if our current CRM isn't compatible?",
+        "acceptedAnswer": {
+          "@type": "Answer", 
+          "text": "We work with all major CRMs (Salesforce, HubSpot, Pipedrive, etc.) and can recommend the best solution if a migration makes sense. Our systems are platform-agnostic."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the minimum company size you work with?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We work best with companies doing $1M-$50M ARR with established product-market fit who need systematic revenue growth, not early-stage validation."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- Navigation -->
-  <nav id="main-nav" class="nav-main fixed-nav">
+  <nav class="main-navigation" id="mainNav">
     <div class="nav-container">
       <div class="nav-brand">
-        <img src="assets/ssl-logo.png" alt="Strategic Success Lab" class="brand-logo">
+        <a href="index.html" class="brand-logo">
+          <img src="assets/ssl-logo.png" alt="Strategic Success Lab" class="logo-img">
+        </a>
       </div>
-      <div class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="services.html" class="nav-link">Services</a>
-        <a href="case-studies.html" class="nav-link">Case Studies</a>
-        <a href="pricing.html" class="nav-link">Pricing</a>
-        <a href="why-ssl.html" class="nav-link">Why SSL</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="resources-enhanced.html" class="nav-link">Resources</a>
-        <a href="contact.html" class="nav-link nav-cta">Contact</a>
+      
+      <div class="nav-menu" id="navMenu">
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          
+          <div class="nav-dropdown">
+            <a href="services.html" class="nav-link dropdown-trigger">
+              Services <span class="dropdown-arrow">▼</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="revenue-architecture.html" class="dropdown-link" aria-current="page">Revenue Architecture</a>
+              <a href="strategic-partnerships.html" class="dropdown-link">Strategic Partnerships</a>
+              <a href="ai-implementation.html" class="dropdown-link">AI Implementation</a>
+              <a href="design-ux.html" class="dropdown-link">Design & UX</a>
+              <a href="talent-solutions.html" class="dropdown-link">Talent Solutions</a>
+            </div>
+          </div>
+          
+          <a href="case-studies.html" class="nav-link">Case Studies</a>
+          <a href="pricing.html" class="nav-link">Pricing</a>
+          <a href="why-ssl.html" class="nav-link">Why SSL</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="resources-enhanced.html" class="nav-link">Resources</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        
+        <a href="contact.html#strategy-call" class="nav-cta">Book Strategy Call</a>
+      </div>
+      
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
   </nav>
@@ -82,15 +148,14 @@
         </div>
       </div>
       <div class="hero-cta">
-        <a href="#calculator" class="btn-primary">Get Revenue Assessment</a>
-        <a href="#approach" class="btn-secondary">See Methodology</a>
+        <a href="#calculator" class="btn">Get Revenue Assessment</a>
+        <a href="#approach" class="btn ghost">See Methodology</a>
       </div>
     </div>
   </section>
 
   <!-- 2. PROBLEM THIS SOLVES -->
-  <section class="service-section problem-section">
-    <div class="container">
+  <section class="section container">
       <div class="section-header">
         <h2>Revenue Systems That Actually Scale</h2>
         <p>Most companies hit revenue plateaus because they lack systematic architecture. Here's what we fix:</p>

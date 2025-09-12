@@ -8,7 +8,8 @@
   <link rel="icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="theme-premium.css">
   <link rel="stylesheet" href="navigation.css">
@@ -21,20 +22,49 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/og.png">
   <meta name="twitter:card" content="summary_large_image">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Strategic Success Lab",
+    "url": "https://strategicsuccesslab.com",
+    "description": "Operator-grade consulting for revenue systems, pipeline partnerships, and practical AI. Fast outcomes, zero fluff.",
+    "foundingDate": "2024",
+    "serviceArea": "United States",
+    "priceRange": "$15000-$75000",
+    "telephone": "+1-833-762-7384",
+    "areaServed": "US",
+    "serviceType": [
+      "Revenue Architecture",
+      "Strategic Partnerships",
+      "AI Implementation",
+      "Design & UX",
+      "Talent Solutions"
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "SSL Founder"
+    }
+  }
+  </script>
 </head>
 <body>
+  <!-- Skip Navigation -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <!-- Sophisticated Navigation -->
   <nav class="main-navigation" id="mainNav">
     <div class="nav-container">
       <div class="nav-brand">
         <a href="index.html" class="brand-logo">
-          <img src="assets/ssl-logo.png" alt="Strategic Success Lab" class="logo-img">
+          <img src="assets/ssl-logo.png" alt="Strategic Success Lab" class="logo-img" width="120" height="40">
         </a>
       </div>
       
       <div class="nav-menu" id="navMenu">
         <div class="nav-links">
-          <a href="index.html" class="nav-link">Home</a>
+          <a href="index.html" class="nav-link" aria-current="page">Home</a>
           
           <div class="nav-dropdown">
             <a href="services.html" class="nav-link dropdown-trigger">
@@ -166,6 +196,11 @@
         </div>
       </div>
       
+      <div class="hero-cta">
+        <a href="contact.html#strategy-call" class="cta-primary touch-feedback">Start Your Revenue Audit</a>
+        <a href="#services-grid" class="cta-secondary">See How We Work</a>
+      </div>
+      
       <!-- SMB Value Props -->
       <div class="hero-value-props">
         <div class="value-prop">
@@ -195,18 +230,36 @@
           <span class="value-text">Optimized for Growth-Stage Companies</span>
         </div>
       </div>
-      
-      <div class="hero-cta">
-        <a href="contact.html#strategy-call" class="cta-primary touch-feedback">Get Your Revenue Audit</a>
-        <a href="#services-grid" class="cta-secondary">See How We Work</a>
-      </div>
     </div>
     <div class="section-divider"></div>
   </section>
 
-
+  <!-- SOCIAL PROOF STATS -->
+  <section class="social-proof-stats section-white">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>81%</h3>
+          <p>Win Rate Improvement</p>
+        </div>
+        <div class="stat-card">
+          <h3>$25M+</h3>
+          <p>Pipeline Generated</p>
+        </div>
+        <div class="stat-card">
+          <h3>27</h3>
+          <p>Companies Scaled</p>
+        </div>
+        <div class="stat-card">
+          <h3>90</h3>
+          <p>Day Average Results</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- 4. SERVICE GRID -->
+  <main id="main-content">
   <section id="services-grid" class="services-preview section-gray">
     <div class="container">
       <h2>Operator-Grade Solutions for Growing Companies</h2>
@@ -401,12 +454,12 @@
         <h3>See the transformation in action:</h3>
         <div class="before-after-container">
           <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop&auto=format" 
-               alt="Before: Chaotic Revenue Process" 
+               alt="Before: Chaotic Revenue Process" width="800" height="400" loading="lazy" 
                class="ba-image ba-before" 
                loading="lazy"
                sizes="(max-width: 768px) 100vw, 800px">
           <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop&auto=format" 
-               alt="After: Streamlined Revenue System" 
+               alt="After: Streamlined Revenue System" width="800" height="400" loading="lazy" 
                class="ba-image ba-after" 
                loading="lazy"
                sizes="(max-width: 768px) 100vw, 800px">
@@ -450,7 +503,7 @@
       <div class="case-gallery">
         <div class="case-card" data-category="revenue">
           <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&auto=format" 
-               alt="SaaS Revenue Transformation" 
+               alt="SaaS Revenue Transformation" width="400" height="200" loading="lazy" 
                class="case-image" 
                loading="lazy"
                sizes="(max-width: 768px) 280px, 400px">
@@ -483,7 +536,7 @@
         </div>
         
         <div class="case-card" data-category="partnerships">
-          <img src="https://images.unsplash.com/photo-1556745757-8d76bdb6984b?w=400&h=200&fit=crop&auto=format" alt="Partnership Growth Engine" class="case-image">
+          <img src="https://images.unsplash.com/photo-1556745757-8d76bdb6984b?w=400&h=200&fit=crop&auto=format" alt="Partnership Growth Engine" class="case-image" width="400" height="200" loading="lazy">
           <div class="case-content">
             <div class="case-category">Strategic Partnerships</div>
             <h3 class="case-title">Partnership Growth Engine</h3>
@@ -507,7 +560,7 @@
         </div>
         
         <div class="case-card" data-category="ai">
-          <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=200&fit=crop&auto=format" alt="AI Workflow Implementation" class="case-image">
+          <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=200&fit=crop&auto=format" alt="AI Workflow Implementation" class="case-image" width="400" height="200" loading="lazy">
           <div class="case-content">
             <div class="case-category">AI Implementation</div>
             <h3 class="case-title">AI Workflow Implementation</h3>
@@ -531,7 +584,7 @@
         </div>
         
         <div class="case-card" data-category="design">
-          <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&h=200&fit=crop&auto=format" alt="UX Optimization" class="case-image">
+          <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&h=200&fit=crop&auto=format" alt="UX Optimization Dashboard Interface" class="case-image" width="400" height="200" loading="lazy">
           <div class="case-content">
             <div class="case-category">Design & UX</div>
             <h3 class="case-title">UX Optimization Project</h3>
@@ -623,7 +676,7 @@
         </div>
         
         <div class="founder-image">
-          <img src="assets/portrait.jpg" alt="Strategic Success Lab Founder" class="founder-photo">
+          <img src="assets/portrait.jpg" alt="Strategic Success Lab Founder" class="founder-photo" width="300" height="300" loading="lazy">
           
           <div class="founder-stats">
             <div class="founder-stat">
@@ -651,9 +704,9 @@
               "SSL helped us build the revenue infrastructure we needed to go from founder-led sales to a repeatable process. In 60 days, we had a working system our team actually uses. No enterprise complexity, just practical systems for our 15-person team."
             </div>
             <div class="testimonial-author">
-              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop&auto=format" alt="Sarah Chen" class="author-photo">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop&auto=format" alt="" class="author-photo">
               <div class="author-info">
-                <h4>Sarah Chen</h4>
+                <h3>Sarah Chen</h3>
                 <p>CEO, TechFlow Solutions (15 employees)</p>
               </div>
             </div>
@@ -664,9 +717,9 @@
               "The partnership program delivered exactly what was promised - 5 qualified partner conversations in 30 days. But more importantly, we now have a systematic approach that keeps generating results month after month."
             </div>
             <div class="testimonial-author">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&auto=format" alt="Marcus Rodriguez" class="author-photo">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&auto=format" alt="" class="author-photo">
               <div class="author-info">
-                <h4>Marcus Rodriguez</h4>
+                <h3>Marcus Rodriguez</h3>
                 <p>CEO, DataSync Technologies</p>
               </div>
             </div>
@@ -677,9 +730,9 @@
               "Their AI implementation approach was refreshingly practical. No buzzwords or overpromises - just systems that actually work and save our team 8 hours every week. The ROI was immediate and measurable."
             </div>
             <div class="testimonial-author">
-              <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=120&h=120&fit=crop&auto=format" alt="Jennifer Park" class="author-photo">
+              <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=120&h=120&fit=crop&auto=format" alt="" class="author-photo">
               <div class="author-info">
-                <h4>Jennifer Park</h4>
+                <h3>Jennifer Park</h3>
                 <p>Head of Marketing, GrowthLabs</p>
               </div>
             </div>
@@ -800,15 +853,17 @@
         <p class="form-subtitle">Free 30-minute consultation for qualified companies</p>
       </div>
       
-      <form class="qualification-form" id="qualificationForm">
+      <form class="qualification-form" id="qualificationForm" novalidate aria-label="Strategy consultation request form">
         <div class="form-row">
           <div class="form-group">
             <label for="companyName">Company Name *</label>
-            <input type="text" id="companyName" name="companyName" required>
+            <input type="text" id="companyName" name="companyName" required aria-describedby="companyName-error">
+            <div class="error-message" id="companyName-error" role="alert"></div>
           </div>
           <div class="form-group">
             <label for="role">Your Role *</label>
-            <input type="text" id="role" name="role" required>
+            <input type="text" id="role" name="role" required aria-describedby="role-error">
+            <div class="error-message" id="role-error" role="alert"></div>
           </div>
         </div>
         
@@ -851,7 +906,8 @@
           </div>
           <div class="form-group">
             <label for="email">Email *</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required aria-describedby="email-error">
+            <div class="error-message" id="email-error" role="alert"></div>
           </div>
         </div>
         
@@ -886,7 +942,7 @@
         </div>
         <div class="footer-links">
           <div class="footer-column">
-            <h4>Services</h4>
+            <h3>Services</h3>
             <a href="revenue-architecture.html">Revenue Architecture</a>
             <a href="strategic-partnerships.html">Strategic Partnerships</a>
             <a href="ai-implementation.html">AI Implementation</a>
@@ -894,7 +950,7 @@
             <a href="talent-solutions.html">Talent Solutions</a>
           </div>
           <div class="footer-column">
-            <h4>Company</h4>
+            <h3>Company</h3>
             <a href="about.html">About</a>
             <a href="case-studies.html">Case Studies</a>
             <a href="resources.html">Resources</a>
@@ -907,6 +963,7 @@
       </div>
     </div>
   </footer>
+  </main>
 
   <!-- Floating CTA (appears after 30% scroll) -->
   <div class="floating-cta" id="floatingCta">
@@ -916,10 +973,10 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
-  <script src="navigation.js"></script>
-  <script src="hero-animations.js"></script>
-  <script src="parallax-effects.js"></script>
+  <script src="script.js" defer></script>
+  <script src="navigation.js" defer></script>
+  <script src="hero-animations.js" defer></script>
+  <script src="parallax-effects.js" defer></script>
   <script src="interactive-showcases.js" defer></script>
   <script src="rolling-text.js" defer></script>
   <script src="mobile-excellence.js" defer></script>
