@@ -24,6 +24,37 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://strategicsuccesslab.com/">
   
+  <!-- Google Analytics 4 - Production Setup -->
+  <!-- TO CONFIGURE FOR PRODUCTION: Replace G-XXXXXXXXXX with your actual GA4 Measurement ID from Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    // PRODUCTION SETUP: Replace G-XXXXXXXXXX with your actual measurement ID
+    gtag('config', 'G-XXXXXXXXXX', {
+      'page_title': document.title,
+      'page_location': window.location.href,
+      'custom_map': {
+        'custom_parameter_1': 'event_category',
+        'custom_parameter_2': 'cta_location'
+      },
+      // Enhanced measurement for automatic event tracking
+      'enhanced_measurement': {
+        'scrolls': true,
+        'outbound_clicks': true,
+        'site_search': true,
+        'video_engagement': true,
+        'file_downloads': true
+      },
+      // Optimize for conversion tracking
+      'send_page_view': true,
+      'transport_type': 'beacon',
+      'anonymize_ip': true
+    });
+  </script>
+  
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
@@ -677,7 +708,7 @@
         </div>
         
         <div class="founder-image">
-          <img src="assets/portrait.jpg" alt="Strategic Success Lab Founder" class="founder-photo" width="300" height="300" loading="lazy">
+          <img src="assets/portrait.jpg" alt="Strategic Success Lab Founder" class="founder-photo" width="300" height="300">
           
           <div class="founder-stats">
             <div class="founder-stat">
@@ -954,7 +985,7 @@
             <h3>Company</h3>
             <a href="about.html">About</a>
             <a href="case-studies.html">Case Studies</a>
-            <a href="resources.html">Resources</a>
+            <a href="resources-enhanced.html">Resources</a>
             <a href="contact.html">Contact</a>
           </div>
         </div>

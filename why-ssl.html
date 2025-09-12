@@ -11,6 +11,38 @@
   <meta property="og:image" content="assets/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://strategicsuccesslab.com/why-ssl.html">
+  
+  <!-- Google Analytics 4 - Production Setup -->
+  <!-- TO CONFIGURE FOR PRODUCTION: Replace G-XXXXXXXXXX with your actual GA4 Measurement ID from Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    // PRODUCTION SETUP: Replace G-XXXXXXXXXX with your actual measurement ID
+    gtag('config', 'G-XXXXXXXXXX', {
+      'page_title': document.title,
+      'page_location': window.location.href,
+      'custom_map': {
+        'custom_parameter_1': 'event_category',
+        'custom_parameter_2': 'cta_location'
+      },
+      // Enhanced measurement for automatic event tracking
+      'enhanced_measurement': {
+        'scrolls': true,
+        'outbound_clicks': true,
+        'site_search': true,
+        'video_engagement': true,
+        'file_downloads': true
+      },
+      // Optimize for conversion tracking
+      'send_page_view': true,
+      'transport_type': 'beacon',
+      'anonymize_ip': true
+    });
+  </script>
+  
   <link rel="icon" href="assets/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
@@ -22,7 +54,7 @@
   <nav id="main-nav" class="nav-main fixed-nav">
     <div class="nav-container">
       <div class="nav-brand">
-        <img src="assets/ssl-logo.png" alt="Strategic Success Lab" class="brand-logo">
+        <img src="assets/ssl-logo.png" alt="Strategic Success Lab" class="brand-logo" width="120" height="40" loading="lazy">
       </div>
       <div class="nav-links">
         <a href="index.html" class="nav-link">Home</a>
@@ -290,7 +322,7 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-brand">
-          <img src="assets/ssl-logo.png" alt="Strategic Success Lab" class="footer-logo">
+          <img src="assets/ssl-logo.png" alt="Strategic Success Lab" class="footer-logo" width="120" height="40" loading="lazy">
           <p>Strategic consulting with measurable results.</p>
         </div>
         <div class="footer-links">
@@ -319,6 +351,7 @@
   </footer>
   
   <script src="entrance-animations.js"></script>
+  <script src="analytics.js" defer></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
