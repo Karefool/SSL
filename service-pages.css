@@ -18,7 +18,7 @@
 .ai-hero,
 .design-hero,
 .talent-hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #4ECDC4 100%);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #4ECDC4 100%) !important;
   height: 100vh;
   position: relative;
   display: flex;
@@ -26,6 +26,10 @@
   justify-content: center;
   overflow: hidden;
   color: white;
+}
+
+.talent-hero::before {
+  display: none !important;
 }
 
 /* Talent Team Visual */
